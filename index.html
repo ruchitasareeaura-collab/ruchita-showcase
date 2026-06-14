@@ -1,4 +1,5 @@
-    <!DOCTYPE html>
+    <div id="noProducts" class="hidden text-center py-16 text-stone-400"><i class="fas fa-box-open text-4xl mb-3"></i><p class="text-lg">কোনো পণ্য নেই</p></div>
+  <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
@@ -19,10 +20,36 @@
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-track{background:#f3ede6}
     ::-webkit-scrollbar-thumb{background:#c4a88b;border-radius:8px}
+    
+    /* সোশ্যাল আইকন — iPhone-style glass circle */
+    .social-icon-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.8);
+      color: #5c4a3a;
+      transition: all 0.25s ease;
+    }
+    .social-icon-circle:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      color: #8b5e3c;
+    }
+    .social-icon-circle i, .social-icon-circle span {
+      font-size: 1.1rem;
+    }
+    
     .watermark-logo{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;opacity:.9;z-index:20;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.8);padding:2px;object-fit:contain}
     @media(min-width:640px){.watermark-logo{width:42px;height:42px}}
-    .category-pill{transition:all .25s;cursor:pointer;white-space:nowrap}
-    .category-pill.active{background:#8b5e3c!important;color:#fff!important;border-color:#8b5e3c!important;box-shadow:0 4px 12px rgba(139,94,60,.25)}
+    .category-pill{transition:all .25s;cursor:pointer;white-space:nowrap;padding:0.5rem 1.2rem;border-radius:2rem;border:1px solid #d6c8b8;background:#fff;color:#5c4a3a;font-weight:600;font-size:0.9rem;}
+    .category-pill.active{background:#8b5e3c!important;color:#fff!important;border-color:#8b5e3c!important;box-shadow:0 6px 16px rgba(139,94,60,0.25)}
     .faq-content{max-height:0;overflow:hidden;transition:max-height .4s}
     .faq-item.open .faq-content{max-height:500px}
     .faq-item.open .faq-icon{transform:rotate(45deg)}
@@ -31,21 +58,25 @@
     .stacked-card{position:absolute;inset:0;border-radius:1.5rem;overflow:hidden;transition:all 0.6s cubic-bezier(0.23,1,0.32,1);box-shadow:0 20px 40px -12px rgba(0,0,0,0.3);background:#fff}
     .stacked-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease}
     .stacked-card:nth-child(1){z-index:3;transform:rotate(0deg) translateZ(0)}
-    .stacked-card:nth-child(2){z-index:2;transform:rotate(-5deg) translateX(-10%) translateY(3%) scale(0.93);opacity:0.85;filter:brightness(0.9)}
-    .stacked-card:nth-child(3){z-index:1;transform:rotate(6deg) translateX(12%) translateY(-2%) scale(0.88);opacity:0.75;filter:brightness(0.85)}
-    .stacked-card-group:hover .stacked-card:nth-child(1) img{transform:scale(1.08)}
-    .stacked-card-group:hover .stacked-card:nth-child(1){transform:rotate(-2deg) translateX(-2%) scale(1.04);box-shadow:0 35px 55px -10px rgba(0,0,0,0.4)}
-    .stacked-card-group:hover .stacked-card:nth-child(2){transform:rotate(-10deg) translateX(-22%) translateY(-6%) scale(0.9);opacity:1;filter:brightness(1)}
-    .stacked-card-group:hover .stacked-card:nth-child(3){transform:rotate(12deg) translateX(28%) translateY(8%) scale(0.85);opacity:1;filter:brightness(1)}
+    .stacked-card:nth-child(2){z-index:2;transform:rotate(-4deg) translateX(-8%) translateY(2%) scale(0.94);opacity:0.88}
+    .stacked-card:nth-child(3){z-index:1;transform:rotate(5deg) translateX(10%) translateY(-1%) scale(0.89);opacity:0.78}
+    .stacked-card-group:hover .stacked-card:nth-child(1) img{transform:scale(1.06)}
+    .stacked-card-group:hover .stacked-card:nth-child(1){transform:rotate(-2deg) translateX(-1%) scale(1.03);box-shadow:0 35px 55px -10px rgba(0,0,0,0.4)}
+    .stacked-card-group:hover .stacked-card:nth-child(2){transform:rotate(-9deg) translateX(-20%) translateY(-5%) scale(0.91);opacity:1}
+    .stacked-card-group:hover .stacked-card:nth-child(3){transform:rotate(11deg) translateX(24%) translateY(7%) scale(0.86);opacity:1}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
     .product-card{animation:fadeInUp 0.6s ease forwards}
-    .image-count-badge{position:absolute;top:10px;right:10px;z-index:15;background:rgba(0,0,0,0.6);color:#fff;font-size:0.65rem;font-weight:600;padding:3px 8px;border-radius:20px}
-    .jelly-btn{position:relative;overflow:hidden;border-radius:3rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.5);background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,transparent 60%);transition:all .2s}
+    .image-count-badge{position:absolute;top:10px;right:10px;z-index:15;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);color:#fff;font-size:0.65rem;font-weight:600;padding:3px 10px;border-radius:20px;letter-spacing:0.3px;}
+    .jelly-btn{position:relative;overflow:hidden;border-radius:3rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.5);background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,transparent 60%);transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;}
     .jelly-btn:active{transform:scale(.97)}
     .wa-btn{background:linear-gradient(135deg,#1fd86a,#0e9a4e)}
     .msg-btn{background:linear-gradient(135deg,#0aa5ff,#0066d1)}
-    .hero-bg{background:linear-gradient(135deg,rgba(245,237,226,.92) 0%,rgba(232,213,192,.85) 50%,rgba(212,184,150,.8) 100%),url('https://images.unsplash.com/photo-1610030469629-8f9d3e8e8e8e?w=1200') center/cover no-repeat}
-    @media(max-width:640px){.stacked-card-group{aspect-ratio:3/4.5}.category-scroll{-webkit-overflow-scrolling:touch;scrollbar-width:none}.category-scroll::-webkit-scrollbar{display:none}}
+    .hero-bg{background:linear-gradient(135deg,rgba(245,237,226,.94) 0%,rgba(232,213,192,.88) 50%,rgba(212,184,150,.82) 100%),url('https://images.unsplash.com/photo-1601924638867-3f3c9c3c8c8c?w=1200') center/cover no-repeat}
+    @media(max-width:640px){
+      .stacked-card-group{aspect-ratio:3/4.5}
+      .category-scroll{-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .category-scroll::-webkit-scrollbar{display:none}
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -68,52 +99,58 @@
   </script>
 
   <header class="sticky top-0 z-50 bg-[#fbf7f2]/95 backdrop-blur-md border-b border-stone-200/70">
-    <div class="max-w-7xl mx-auto px-4 flex items-center h-16">
-      <a href="#" class="flex items-center gap-3 no-underline">
-        <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" alt="রুচিতা" class="w-10 h-10 rounded-full object-contain bg-white p-0.5 shadow-md">
-        <div><span class="text-xl font-bold text-[#8b5e3c] font-bn">রুচিতা™</span><span class="text-[10px] font-en text-stone-500 block">Ruchita Saree Aura</span></div>
+    <div class="max-w-7xl mx-auto px-4 flex items-center h-14">
+      <a href="#" class="flex items-center gap-2.5 no-underline">
+        <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" alt="রুচিতা" class="w-9 h-9 rounded-full object-contain bg-white p-0.5 shadow-sm">
+        <div><span class="text-lg font-bold text-[#8b5e3c] font-bn">রুচিতা™</span><span class="text-[9px] font-en text-stone-500 block">Ruchita Saree Aura</span></div>
       </a>
     </div>
   </header>
 
-  <section class="hero-bg pt-16 pb-14 sm:pt-24 sm:pb-20 text-center px-4 relative">
-    <div class="absolute inset-0 bg-black/10"></div>
-    <div class="relative z-10 max-w-3xl mx-auto">
-      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w200" alt="রুচিতা" class="w-28 h-28 sm:w-32 sm:h-32 rounded-full mx-auto mb-5 object-contain bg-white/80 p-2 shadow-2xl ring-2 ring-amber-300/40">
-      <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold text-stone-800 font-calligraphy tracking-wide leading-none">রুচিতা<sup class="text-xl sm:text-2xl">™</sup></h1>
-      <p class="text-lg sm:text-2xl font-serif text-stone-600 mt-2 tracking-[0.3em] uppercase italic">Ruchita Saree Aura</p>
-      <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-[#8b5e3c] to-transparent mx-auto mt-5"></div>
-      <p class="text-xl sm:text-3xl text-stone-700 mt-6 italic font-bn">"রুচিশীলতার আরেক নাম — <span class="font-calligraphy text-4xl sm:text-5xl text-[#8b5e3c]">রুচিতা</span>"</p>
-      <p class="text-sm sm:text-base font-serif text-stone-500 mt-2 italic">"Another name for taste is <span class="font-bold text-[#8b5e3c]">Ruchita</span>"</p>
-      <div class="flex justify-center gap-4 mt-8 text-xl text-stone-500">
-        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="hover:text-[#1877F2]"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="hover:text-[#1877F2] text-sm font-en font-semibold">Group</a>
-        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="hover:text-[#E4405F]"><i class="fab fa-instagram"></i></a>
-        <a href="https://surl.li/ljtecz" target="_blank" class="hover:text-[#25D366]"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://x.com/RuchitaSaree01" target="_blank" class="hover:text-black"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.threads.com/@ruchitasareeaura" target="_blank" class="hover:text-black"><i class="fab fa-threads"></i></a>
+  <!-- কমপ্যাক্ট হিরো ব্যানার -->
+  <section class="hero-bg pt-10 pb-8 sm:pt-14 sm:pb-10 text-center px-4 relative">
+    <div class="absolute inset-0 bg-black/5"></div>
+    <div class="relative z-10 max-w-2xl mx-auto">
+      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w160" alt="রুচিতা" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-4 object-contain bg-white/80 p-1.5 shadow-xl ring-1 ring-amber-300/30">
+      <h1 class="text-4xl sm:text-6xl font-bold text-stone-800 font-calligraphy leading-none">রুচিতা<sup class="text-base sm:text-xl">™</sup></h1>
+      <p class="text-base sm:text-xl font-serif text-stone-600 mt-1 tracking-[0.25em] uppercase italic">Ruchita Saree Aura</p>
+      <div class="w-16 h-0.5 bg-[#8b5e3c] mx-auto mt-4"></div>
+      <p class="text-lg sm:text-2xl text-stone-700 mt-3 italic font-bn">"রুচিশীলতার আরেক নাম"</p>
+      <p class="text-xs sm:text-sm font-serif text-stone-500 mt-1 italic">"Another name for taste is <span class="font-bold text-[#8b5e3c]">Ruchita</span>"</p>
+      
+      <!-- সোশ্যাল আইকন সারি — গ্লাস সার্কেল -->
+      <div class="flex justify-center gap-3 mt-6">
+        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon-circle"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="social-icon-circle"><span class="font-en font-bold text-xs">G</span></a>
+        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="social-icon-circle"><i class="fab fa-instagram"></i></a>
+        <a href="https://surl.li/ljtecz" target="_blank" class="social-icon-circle"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/RuchitaSaree01" target="_blank" class="social-icon-circle"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.threads.com/@ruchitasareeaura" target="_blank" class="social-icon-circle"><i class="fab fa-threads"></i></a>
       </div>
-      <div class="mt-8 flex justify-center gap-4 flex-wrap">
-        <a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-8 py-3.5 text-sm"><i class="fas fa-gem mr-2"></i>সংগ্রহ দেখুন</a>
-        <a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-8 py-3.5 text-sm"><i class="fab fa-whatsapp text-lg mr-2"></i>অর্ডার করুন</a>
+
+      <div class="mt-6 flex justify-center gap-3 flex-wrap">
+        <a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-7 py-3 text-sm"><i class="fas fa-gem"></i> সংগ্রহ</a>
+        <a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-7 py-3 text-sm"><i class="fab fa-whatsapp text-lg"></i> অর্ডার</a>
       </div>
     </div>
   </section>
 
-  <section class="sticky top-16 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-3">
+  <!-- CATEGORIES -->
+  <section class="sticky top-14 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-2.5">
     <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll">
-      <button class="category-pill active px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="all">সব</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
+      <button class="category-pill active" data-category="all">সব</button>
+      <button class="category-pill" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
+      <button class="category-pill" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
+      <button class="category-pill" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button>
+      <button class="category-pill" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
     </div>
   </section>
 
-  <section id="collection" class="max-w-7xl mx-auto px-4 py-10 sm:py-16">
-    <h2 class="text-3xl sm:text-5xl font-bold text-center font-bn mb-2">আমাদের সংগ্রহ</h2>
-    <p class="text-xs text-center text-stone-400 font-serif tracking-[0.25em] uppercase mb-8">Our Collection</p>
-    <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+  <!-- PRODUCTS -->
+  <section id="collection" class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
+    <h2 class="text-2xl sm:text-4xl font-bold text-center font-bn mb-1">আমাদের সংগ্রহ</h2>
+    <p class="text-xs text-center text-stone-400 font-serif tracking-[0.2em] uppercase mb-8">Our Collection</p>
+    <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     <div id="noProducts" class="hidden text-center py-16 text-stone-400">কোনো পণ্য নেই</div>
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
       <button class="absolute top-4 right-4 text-white text-3xl">&times;</button>
@@ -121,27 +158,30 @@
     </div>
   </section>
 
-  <section class="bg-[#f7f1e9] py-12 px-4 text-center">
-    <h2 class="text-2xl font-bold font-bn mb-2">আমাদের সম্পর্কে</h2>
+  <!-- ABOUT -->
+  <section class="bg-[#f7f1e9] py-10 px-4 text-center">
+    <h2 class="text-xl font-bold font-bn mb-2">আমাদের সম্পর্কে</h2>
     <p class="text-xs text-stone-500 font-serif mb-4">About Us</p>
-    <p class="text-base text-stone-700 max-w-3xl mx-auto font-bn">রুচিতা শাড়ি অরা বাংলার নিরবধি ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p>
+    <p class="text-sm text-stone-700 max-w-2xl mx-auto font-bn">রুচিতা শাড়ি অরা বাংলার নিরবধি ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p>
   </section>
 
-  <section class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-3 gap-5 text-center">
-    <div class="p-6 rounded-2xl bg-white border"><i class="fas fa-money-bill-wave text-3xl text-[#8b5e3c] mb-3"></i><h3 class="text-lg font-bold font-bn">ক্যাশ অন ডেলিভারি</h3></div>
-    <div class="p-6 rounded-2xl bg-white border"><i class="fas fa-truck-fast text-3xl text-[#8b5e3c] mb-3"></i><h3 class="text-lg font-bold font-bn">ডেলিভারি</h3></div>
-    <div class="p-6 rounded-2xl bg-white border"><i class="fas fa-rotate-left text-3xl text-[#8b5e3c] mb-3"></i><h3 class="text-lg font-bold font-bn">রিটার্ন</h3></div>
-  </section>
-
-  <footer class="footer-gradient text-stone-200 py-10 px-4">
-    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
-      <div><h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">সংগ্রহ</h4><ul class="space-y-2 text-xs text-stone-400"><li><a href="#">টাঙ্গাইল মনিপুরী</a></li><li><a href="#">হাফ সিল্ক বুট্টি</a></li><li><a href="#">ঢাকাই জামদানি</a></li><li><a href="#">হাফ সিল্ক জামদানি</a></li></ul></div>
-      <div><h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">পলিসি</h4><ul class="space-y-2 text-xs text-stone-400"><li><a href="#">ক্যাশ অন ডেলিভারি</a></li><li><a href="#">ডেলিভারি</a></li><li><a href="#">রিটার্ন</a></li></ul></div>
-      <div><h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">যোগাযোগ</h4><ul class="space-y-2 text-xs text-stone-400"><li><a href="#" onclick="openWA('general')"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a></li><li><a href="mailto:ruchitasaree0622@gmail.com"><i class="fas fa-envelope mr-1"></i> Email</a></li></ul></div>
-      <div><h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">সোশ্যাল</h4><div class="flex gap-3 text-lg"><a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="text-stone-400 hover:text-[#1877F2]"><i class="fab fa-facebook"></i></a><a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="text-stone-400 hover:text-[#E4405F]"><i class="fab fa-instagram"></i></a><a href="https://surl.li/ljtecz" target="_blank" class="text-stone-400 hover:text-[#25D366]"><i class="fab fa-whatsapp"></i></a></div></div>
-    </div>
-    <div class="text-center border-t border-stone-700/50 pt-6">
-      <p class="text-xs text-stone-500 font-serif">© 2026 Ruchita Saree Aura. All Rights Reserved.</p>
+  <!-- FOOTER (ক্লিন) -->
+  <footer class="footer-gradient text-stone-200 py-8 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-3">
+        <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w80" alt="রুচিতা" class="w-9 h-9 rounded-full bg-white p-0.5">
+        <div>
+          <p class="font-bold text-amber-300 font-bn">রুচিতা™</p>
+          <p class="text-[10px] text-stone-400 font-serif">Ruchita Saree Aura</p>
+        </div>
+      </div>
+      <div class="flex gap-3 text-lg">
+        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+        <a href="https://surl.li/ljtecz" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:ruchitasaree0622@gmail.com" class="text-stone-400 hover:text-white"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="text-[10px] text-stone-500 font-serif">© 2026 Ruchita Saree Aura</p>
     </div>
   </footer>
 
@@ -158,7 +198,7 @@
         const c=document.createElement('div');
         c.className='product-card bg-white rounded-3xl overflow-hidden border shadow-xl flex flex-col';
         c.innerHTML=`<div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(d).replace(/"/g,'&quot;')})"><div class="stacked-card"><img src="${d[0]}" loading="lazy"></div><div class="stacked-card"><img src="${d[1]}" loading="lazy"></div><div class="stacked-card"><img src="${d[2]}" loading="lazy"></div><div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-[10px] px-3 py-1 rounded-full">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full">Available</span>'}</div><div class="image-count-badge"><i class="fas fa-images"></i> ৩টি</div><img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="watermark-logo" alt="রুচিতা"></div>
-        <div class="p-4 flex flex-col flex-grow"><h3 class="text-lg font-bold text-stone-800 font-bn">${p.nameBn}</h3><p class="text-[11px] text-stone-400 font-serif">${p.nameEn}</p><p class="text-xs text-stone-600 mt-2 font-bn">${p.descBn}</p><div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div><div class="flex gap-2 mt-4"><a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="jelly-btn wa-btn text-white py-2.5 px-4 text-xs font-semibold flex-1 text-center"><i class="fab fa-whatsapp"></i> অর্ডার</a><a href="https://m.me/ruchitasareeaura" target="_blank" class="jelly-btn msg-btn text-white py-2.5 px-4 text-xs font-semibold flex-1 text-center"><i class="fab fa-facebook-messenger"></i> Messenger</a></div></div>`;
+        <div class="p-4 flex flex-col flex-grow"><h3 class="text-lg font-bold text-stone-800 font-bn">${p.nameBn}</h3><p class="text-[11px] text-stone-400 font-serif">${p.nameEn}</p><p class="text-xs text-stone-600 mt-2 font-bn">${p.descBn}</p><div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div><div class="flex gap-2 mt-4"><a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="jelly-btn wa-btn text-white py-2.5 px-4 text-xs font-semibold flex-1"><i class="fab fa-whatsapp"></i> অর্ডার</a><a href="https://m.me/ruchitasareeaura" target="_blank" class="jelly-btn msg-btn text-white py-2.5 px-4 text-xs font-semibold flex-1"><i class="fab fa-facebook-messenger"></i> Messenger</a></div></div>`;
         pg.appendChild(c);
       });
     }
@@ -174,46 +214,7 @@
     renderShowcase('all');
   </script>
 </body>
-</html>  <p class="text-xl sm:text-3xl text-stone-700 mt-6 italic font-bn leading-relaxed max-w-2xl mx-auto">"রুচিশীলতার আরেক নাম — <span class="font-calligraphy text-4xl sm:text-5xl text-[#8b5e3c]">রুচিতা</span>"</p>
-      <p class="text-sm sm:text-base font-serif text-stone-500 mt-2 italic">"Another name for taste is <span class="font-bold text-[#8b5e3c]">Ruchita</span>"</p>
-      <!-- সোশ্যাল আইকন -->
-      <div class="flex justify-center gap-4 mt-8 text-xl text-stone-500">
-        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="hover:text-[#1877F2] transition"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="hover:text-[#1877F2] transition text-sm font-en font-semibold">Group</a>
-        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="hover:text-[#E4405F] transition"><i class="fab fa-instagram"></i></a>
-        <a href="https://surl.li/ljtecz" target="_blank" class="hover:text-[#25D366] transition"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://x.com/RuchitaSaree01" target="_blank" class="hover:text-black transition"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.threads.com/@ruchitasareeaura" target="_blank" class="hover:text-black transition"><i class="fab fa-threads"></i></a>
-      </div>
-      <!-- জেলি গ্লস বাটন -->
-      <div class="mt-8 flex justify-center gap-4 flex-wrap">
-        <a href="#collection" class="jelly-gloss bg-[#8b5e3c] text-white px-8 py-3.5 text-sm font-semibold"><i class="fas fa-gem mr-2"></i>সংগ্রহ দেখুন</a>
-        <a href="#" onclick="openWA('general')" class="jelly-gloss wa-jelly text-white px-8 py-3.5 text-sm font-semibold"><i class="fab fa-whatsapp text-lg mr-2"></i>অর্ডার করুন</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CATEGORIES -->
-  <section class="sticky top-16 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-3">
-    <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll">
-      <button class="category-pill active px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="all">সব</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button>
-      <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
-    </div>
-  </section>
-
-  <!-- PRODUCT SHOWCASE -->
-  <section id="collection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl sm:text-5xl font-bold text-stone-800 font-bn leading-none">আমাদের সংগ্রহ</h2>
-      <p class="text-xs text-stone-400 font-serif tracking-[0.25em] uppercase mt-2">Our Collection</p>
-      <div class="w-12 h-0.5 bg-[#8b5e3c] mx-auto mt-4"></div>
-    </div>
-    <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
-    <div id="noProducts" class="hidden text-center py-16 text-stone-400"><i class="fas fa-box-open text-4xl mb-3"></i><p class="text-lg">কোনো পণ্য নেই</p></div>
-    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+</html>  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
       <button class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl z-10">&times;</button>
       <div class="max-w-5xl w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
         <div id="lightboxContent" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
