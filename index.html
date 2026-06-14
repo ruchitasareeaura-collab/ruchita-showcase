@@ -8,52 +8,41 @@
   <title>রুচিতা™ • Ruchita Saree Aura</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Hind Siliguri','Noto Serif Bengali',sans-serif;background:#fbf7f2;color:#2c2416;scroll-behavior:smooth}
-    .font-en{font-family:'Inter','Cormorant Garamond',sans-serif}
-    .font-bn{font-family:'Noto Serif Bengali','Hind Siliguri',serif}
+    .font-en{font-family:'Inter',sans-serif}
+    .font-bn{font-family:'Noto Serif Bengali','Hind Siliguri',serif;font-weight:600}
     .font-serif{font-family:'Playfair Display','Cormorant Garamond',serif}
     .font-calligraphy{font-family:'Tangerine',cursive}
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-track{background:#f3ede6}
     ::-webkit-scrollbar-thumb{background:#c4a88b;border-radius:8px}
-    .social-icon-circle {
-      display:inline-flex;align-items:center;justify-content:center;
-      width:2.5rem;height:2.5rem;border-radius:50%;
-      background:rgba(255,255,255,0.7);backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
-      box-shadow:0 2px 10px rgba(0,0,0,0.06),inset 0 1px 0 rgba(255,255,255,0.8);
-      color:#5c4a3a;transition:all 0.2s;
-    }
-    .social-icon-circle:hover{background:#fff;transform:translateY(-2px);color:#8b5e3c}
-    .watermark-logo{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;opacity:.9;z-index:20;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.8);padding:2px;object-fit:contain}
-    @media(min-width:640px){.watermark-logo{width:42px;height:42px}}
-    .category-pill{transition:all .25s;cursor:pointer;white-space:nowrap;padding:0.5rem 1.2rem;border-radius:2rem;border:1px solid #d6c8b8;background:#fff;color:#5c4a3a;font-weight:600;font-size:0.9rem}
+    .social-icon-circle{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border-radius:50%;background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 2px 12px rgba(0,0,0,0.08),inset 0 1px 0 rgba(255,255,255,0.9);color:#5c4a3a;transition:all 0.25s;font-size:1.3rem}
+    .social-icon-circle:hover{background:#fff;transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,0.15);color:#8b5e3c}
+    .watermark-logo{position:absolute;bottom:10px;right:10px;width:36px;height:36px;border-radius:50%;opacity:.9;z-index:20;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.85);padding:3px;object-fit:contain}
+    @media(min-width:640px){.watermark-logo{width:44px;height:44px}}
+    .category-pill{transition:all .25s;cursor:pointer;white-space:nowrap;padding:0.5rem 1.2rem;border-radius:2rem;border:1px solid #d6c8b8;background:#fff;color:#5c4a3a;font-weight:600;font-size:0.95rem}
     .category-pill.active{background:#8b5e3c!important;color:#fff!important;border-color:#8b5e3c!important;box-shadow:0 6px 16px rgba(139,94,60,0.25)}
-    .faq-content{max-height:0;overflow:hidden;transition:max-height .4s}
-    .faq-item.open .faq-content{max-height:500px}
-    .faq-item.open .faq-icon{transform:rotate(45deg)}
     .footer-gradient{background:linear-gradient(180deg,#1a1510 0%,#2c2416 50%,#3d3220 100%)}
-    .stacked-card-group{position:relative;width:100%;aspect-ratio:4/5;cursor:pointer;perspective:1200px;margin-bottom:0.5rem}
-    .stacked-card{position:absolute;inset:0;border-radius:1.5rem;overflow:hidden;transition:all 0.6s cubic-bezier(0.23,1,0.32,1);box-shadow:0 20px 40px -12px rgba(0,0,0,0.3);background:#fff}
-    .stacked-card img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease}
-    .stacked-card:nth-child(1){z-index:3;transform:rotate(0deg) translateZ(0)}
-    .stacked-card:nth-child(2){z-index:2;transform:rotate(-4deg) translateX(-8%) translateY(2%) scale(0.94);opacity:0.88}
-    .stacked-card:nth-child(3){z-index:1;transform:rotate(5deg) translateX(10%) translateY(-1%) scale(0.89);opacity:0.78}
-    .stacked-card-group:hover .stacked-card:nth-child(1) img{transform:scale(1.06)}
-    .stacked-card-group:hover .stacked-card:nth-child(1){transform:rotate(-2deg) translateX(-1%) scale(1.03);box-shadow:0 35px 55px -10px rgba(0,0,0,0.4)}
-    .stacked-card-group:hover .stacked-card:nth-child(2){transform:rotate(-9deg) translateX(-20%) translateY(-5%) scale(0.91);opacity:1}
-    .stacked-card-group:hover .stacked-card:nth-child(3){transform:rotate(11deg) translateX(24%) translateY(7%) scale(0.86);opacity:1}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-    .product-card{animation:fadeInUp 0.6s ease forwards}
-    .image-count-badge{position:absolute;top:10px;right:10px;z-index:15;background:rgba(0,0,0,0.55);backdrop-filter:blur(6px);color:#fff;font-size:0.65rem;font-weight:600;padding:3px 10px;border-radius:20px}
-    .jelly-btn{position:relative;overflow:hidden;border-radius:3rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.5);background:linear-gradient(180deg,rgba(255,255,255,.3) 0%,transparent 60%);transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:0.4rem}
+    .stacked-card-group{position:relative;width:100%;aspect-ratio:4/5;cursor:pointer;perspective:1000px;margin-bottom:0.5rem}
+    .stacked-card{position:absolute;inset:0;border-radius:1.5rem;overflow:hidden;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 16px 32px -8px rgba(0,0,0,0.25);background:#fff}
+    .stacked-card img{width:100%;height:100%;object-fit:cover}
+    .stacked-card:nth-child(1){z-index:3;transform:rotate(0deg)}
+    .stacked-card:nth-child(2){z-index:2;transform:rotate(-3deg) translateX(-5%) translateY(1.5%) scale(0.95);opacity:0.9}
+    .stacked-card:nth-child(3){z-index:1;transform:rotate(4deg) translateX(7%) translateY(-1%) scale(0.91);opacity:0.8}
+    .stacked-card-group:hover .stacked-card:nth-child(1){transform:rotate(-1.5deg) scale(1.03);box-shadow:0 28px 48px -8px rgba(0,0,0,0.35)}
+    .stacked-card-group:hover .stacked-card:nth-child(2){transform:rotate(-7deg) translateX(-16%) translateY(-3%) scale(0.92);opacity:1}
+    .stacked-card-group:hover .stacked-card:nth-child(3){transform:rotate(9deg) translateX(20%) translateY(5%) scale(0.88);opacity:1}
+    .product-card{animation:fadeInUp 0.5s ease forwards}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .image-count-badge{position:absolute;top:10px;right:10px;z-index:15;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);color:#fff;font-size:0.65rem;font-weight:600;padding:3px 10px;border-radius:20px}
+    .jelly-btn{position:relative;overflow:hidden;border-radius:3rem;font-weight:600;box-shadow:0 8px 28px rgba(0,0,0,.15),inset 0 1px 0 rgba(255,255,255,.5);background:linear-gradient(180deg,rgba(255,255,255,.25) 0%,transparent 60%);transition:all .2s;display:inline-flex;align-items:center;justify-content:center;gap:0.4rem;font-size:0.95rem}
     .jelly-btn:active{transform:scale(.97)}
     .wa-btn{background:linear-gradient(135deg,#1fd86a,#0e9a4e)}
     .msg-btn{background:linear-gradient(135deg,#0aa5ff,#0066d1)}
-    .hero-bg{background:linear-gradient(135deg,rgba(245,237,226,.94) 0%,rgba(232,213,192,.88) 50%,rgba(212,184,150,.82) 100%),url('https://images.unsplash.com/photo-1601924638867-3f3c9c3c8c8c?w=1200') center/cover no-repeat}
+    .hero-bg{background:linear-gradient(135deg,rgba(245,237,226,.95) 0%,rgba(232,213,192,.9) 50%,rgba(212,184,150,.85) 100%),url('https://images.unsplash.com/photo-1601924638867-3f3c9c3c8c8c?w=1200') center/cover no-repeat}
     @media(max-width:640px){.stacked-card-group{aspect-ratio:3/4.5}.category-scroll{-webkit-overflow-scrolling:touch;scrollbar-width:none}.category-scroll::-webkit-scrollbar{display:none}}
   </style>
 </head>
@@ -80,31 +69,23 @@
     <div class="max-w-7xl mx-auto px-4 flex items-center h-14">
       <a href="#" class="flex items-center gap-2.5 no-underline">
         <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" alt="রুচিতা" class="w-9 h-9 rounded-full object-contain bg-white p-0.5 shadow-sm">
-        <div><span class="text-lg font-bold text-[#8b5e3c] font-bn">রুচিতা™</span><span class="text-[9px] font-en text-stone-500 block">Ruchita Saree Aura</span></div>
+        <div><span class="text-lg font-bold text-[#8b5e3c] font-bn">রুচিতা™</span><span class="text-[10px] font-en text-stone-500 block">Ruchita Saree Aura</span></div>
       </a>
     </div>
   </header>
 
-  <section class="hero-bg pt-10 pb-8 sm:pt-14 sm:pb-10 text-center px-4 relative">
+  <section class="hero-bg pt-8 pb-6 sm:pt-10 sm:pb-8 text-center px-4 relative">
     <div class="absolute inset-0 bg-black/5"></div>
     <div class="relative z-10 max-w-2xl mx-auto">
-      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w160" alt="রুচিতা" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-4 object-contain bg-white/80 p-1.5 shadow-xl ring-1 ring-amber-300/30">
-      <h1 class="text-4xl sm:text-6xl font-bold text-stone-800 font-calligraphy leading-none">রুচিতা<sup class="text-base sm:text-xl">™</sup></h1>
-      <p class="text-base sm:text-xl font-serif text-stone-600 mt-1 tracking-[0.25em] uppercase italic">Ruchita Saree Aura</p>
-      <div class="w-16 h-0.5 bg-[#8b5e3c] mx-auto mt-4"></div>
-      <p class="text-lg sm:text-2xl text-stone-700 mt-3 italic font-bn">"রুচিশীলতার আরেক নাম"</p>
-      <p class="text-xs sm:text-sm font-serif text-stone-500 mt-1 italic">"Another name for taste is <span class="font-bold text-[#8b5e3c]">Ruchita</span>"</p>
-      <div class="flex justify-center gap-3 mt-6">
-        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon-circle"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="social-icon-circle"><span class="font-en font-bold text-xs">G</span></a>
-        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="social-icon-circle"><i class="fab fa-instagram"></i></a>
-        <a href="https://surl.li/ljtecz" target="_blank" class="social-icon-circle"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://x.com/RuchitaSaree01" target="_blank" class="social-icon-circle"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://www.threads.com/@ruchitasareeaura" target="_blank" class="social-icon-circle"><i class="fab fa-threads"></i></a>
-      </div>
-      <div class="mt-6 flex justify-center gap-3 flex-wrap">
-        <a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-7 py-3 text-sm"><i class="fas fa-gem"></i> সংগ্রহ</a>
-        <a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-7 py-3 text-sm"><i class="fab fa-whatsapp text-lg"></i> অর্ডার</a>
+      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w140" alt="রুচিতা" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 object-contain bg-white/80 p-1.5 shadow-lg ring-1 ring-amber-300/30">
+      <h1 class="text-4xl sm:text-5xl font-bold text-stone-800 font-calligraphy leading-none">রুচিতা<sup class="text-sm sm:text-lg">™</sup></h1>
+      <p class="text-sm sm:text-lg font-serif text-stone-600 mt-1 tracking-[0.2em] uppercase italic">Ruchita Saree Aura</p>
+      <div class="w-12 h-0.5 bg-[#8b5e3c] mx-auto mt-3"></div>
+      <p class="text-base sm:text-xl text-stone-700 mt-3 italic font-bn">"রুচিশীলতার আরেক নাম"</p>
+      <p class="text-xs font-serif text-stone-500 mt-1 italic">"Another name for taste is Ruchita"</p>
+      <div class="mt-5 flex justify-center gap-3 flex-wrap">
+        <a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-6 py-2.5 text-sm"><i class="fas fa-gem"></i> সংগ্রহ</a>
+        <a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-6 py-2.5 text-sm"><i class="fab fa-whatsapp text-lg"></i> অর্ডার</a>
       </div>
     </div>
   </section>
@@ -119,9 +100,9 @@
     </div>
   </section>
 
-  <section id="collection" class="max-w-7xl mx-auto px-4 py-8 sm:py-12">
-    <h2 class="text-2xl sm:text-4xl font-bold text-center font-bn mb-1">আমাদের সংগ্রহ</h2>
-    <p class="text-xs text-center text-stone-400 font-serif tracking-[0.2em] uppercase mb-8">Our Collection</p>
+  <section id="collection" class="max-w-7xl mx-auto px-4 py-8 sm:py-10">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center font-bn mb-1">আমাদের সংগ্রহ</h2>
+    <p class="text-xs text-center text-stone-400 font-serif tracking-[0.2em] uppercase mb-6">Our Collection</p>
     <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     <div id="noProducts" class="hidden text-center py-16 text-stone-400">কোনো পণ্য নেই</div>
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()">
@@ -130,57 +111,52 @@
     </div>
   </section>
 
-  <section class="bg-[#f7f1e9] py-10 px-4 text-center">
+  <section class="bg-[#f7f1e9] py-8 px-4 text-center">
     <h2 class="text-xl font-bold font-bn mb-2">আমাদের সম্পর্কে</h2>
-    <p class="text-xs text-stone-500 font-serif mb-4">About Us</p>
+    <p class="text-xs text-stone-500 font-serif mb-3">About Us</p>
     <p class="text-sm text-stone-700 max-w-2xl mx-auto font-bn">রুচিতা শাড়ি অরা বাংলার নিরবধি ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p>
   </section>
 
-  <!-- ফুটার -->
   <footer class="footer-gradient text-stone-200 py-10 px-4 sm:px-8">
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- যোগাযোগ -->
       <div>
-        <h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">📞 যোগাযোগ</h4>
-        <ul class="space-y-2 text-xs text-stone-400">
-          <li><a href="tel:+8801885092595" class="hover:text-amber-300"><i class="fab fa-whatsapp mr-1"></i> +880 1885092595</a></li>
-          <li><a href="https://surl.li/ljtecz" target="_blank" class="hover:text-amber-300"><i class="fas fa-broadcast-tower mr-1"></i> WhatsApp চ্যানেল</a></li>
-          <li><a href="mailto:ruchitasaree0622@gmail.com" class="hover:text-amber-300"><i class="fas fa-envelope mr-1"></i> ইমেইল</a></li>
+        <h4 class="text-amber-300 font-bold text-base mb-3 font-bn">📞 যোগাযোগ</h4>
+        <ul class="space-y-2 text-sm text-stone-300">
+          <li><a href="tel:+8801885092595" class="hover:text-amber-300"><i class="fab fa-whatsapp mr-2"></i>+880 1885092595</a></li>
+          <li><a href="https://surl.li/ljtecz" target="_blank" class="hover:text-amber-300"><i class="fas fa-broadcast-tower mr-2"></i>WhatsApp চ্যানেল</a></li>
+          <li><a href="mailto:ruchitasaree0622@gmail.com" class="hover:text-amber-300"><i class="fas fa-envelope mr-2"></i>ইমেইল</a></li>
         </ul>
       </div>
-      <!-- ঠিকানা -->
       <div>
-        <h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">📍 ঠিকানা</h4>
-        <p class="text-xs text-stone-400 leading-relaxed">
+        <h4 class="text-amber-300 font-bold text-base mb-3 font-bn">📍 ঠিকানা</h4>
+        <p class="text-sm text-stone-300 leading-relaxed">
           রুচিতা™ RuchitaSareeAura<br>
           Sekertek 10, Adabar Thana<br>
           Dhaka - 1207, Bangladesh
         </p>
       </div>
-      <!-- শিপিং -->
       <div>
-        <h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">🚚 শিপিং ও রিটার্ন</h4>
-        <ul class="space-y-2 text-xs text-stone-400">
+        <h4 class="text-amber-300 font-bold text-base mb-3 font-bn">🚚 শিপিং ও রিটার্ন</h4>
+        <ul class="space-y-2 text-sm text-stone-300">
           <li>✓ ঢাকার মধ্যে: ৮০ টাকা</li>
           <li>✓ ঢাকার বাইরে: ১২০ টাকা</li>
           <li>✓ সহজ ৭ দিনের রিটার্ন</li>
         </ul>
       </div>
-      <!-- ফলো -->
       <div>
-        <h4 class="text-amber-300 font-bold text-sm mb-3 font-bn">🌐 অনুসরণ</h4>
-        <div class="flex gap-3 text-xl">
-          <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="text-stone-400 hover:text-[#1877F2]"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="text-stone-400 hover:text-[#1877F2] text-sm font-en font-bold">G</a>
-          <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="text-stone-400 hover:text-[#E4405F]"><i class="fab fa-instagram"></i></a>
-          <a href="https://surl.li/ljtecz" target="_blank" class="text-stone-400 hover:text-[#25D366]"><i class="fab fa-whatsapp"></i></a>
-          <a href="https://x.com/RuchitaSaree01" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-x-twitter"></i></a>
+        <h4 class="text-amber-300 font-bold text-base mb-3 font-bn">🌐 অনুসরণ</h4>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon-circle"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="social-icon-circle"><span class="font-en font-bold">G</span></a>
+          <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="social-icon-circle"><i class="fab fa-instagram"></i></a>
+          <a href="https://surl.li/ljtecz" target="_blank" class="social-icon-circle"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://x.com/RuchitaSaree01" target="_blank" class="social-icon-circle"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
     </div>
     <div class="text-center border-t border-stone-700/50 mt-8 pt-6">
-      <p class="text-[11px] text-stone-500 font-serif">© 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
-      <p class="text-[10px] text-stone-600 font-serif mt-1">All Rights Reserved.</p>
+      <p class="text-sm text-stone-400 font-serif">© 2024 রুচিতা™ RuchitaSareeAura. সর্বাধিকার সংরক্ষিত।</p>
+      <p class="text-xs text-stone-500 font-serif mt-1">All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -196,8 +172,8 @@
         const d=[]; for(let i=0;i<3;i++) d.push(imgs[i%imgs.length]);
         const c=document.createElement('div');
         c.className='product-card bg-white rounded-3xl overflow-hidden border shadow-xl flex flex-col';
-        c.innerHTML=`<div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(d).replace(/"/g,'&quot;')})"><div class="stacked-card"><img src="${d[0]}" loading="lazy"></div><div class="stacked-card"><img src="${d[1]}" loading="lazy"></div><div class="stacked-card"><img src="${d[2]}" loading="lazy"></div><div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-[10px] px-3 py-1 rounded-full">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full">Available</span>'}</div><div class="image-count-badge"><i class="fas fa-images"></i> ৩টি</div><img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="watermark-logo" alt="রুচিতা"></div>
-        <div class="p-4 flex flex-col flex-grow"><h3 class="text-lg font-bold text-stone-800 font-bn">${p.nameBn}</h3><p class="text-[11px] text-stone-400 font-serif">${p.nameEn}</p><p class="text-xs text-stone-600 mt-2 font-bn">${p.descBn}</p><div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div><div class="flex gap-2 mt-4"><a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="jelly-btn wa-btn text-white py-2.5 px-4 text-xs font-semibold flex-1"><i class="fab fa-whatsapp"></i> অর্ডার</a><a href="https://m.me/ruchitasareeaura" target="_blank" class="jelly-btn msg-btn text-white py-2.5 px-4 text-xs font-semibold flex-1"><i class="fab fa-facebook-messenger"></i> Messenger</a></div></div>`;
+        c.innerHTML=`<div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(d).replace(/"/g,'&quot;')})"><div class="stacked-card"><img src="${d[0]}" loading="lazy"></div><div class="stacked-card"><img src="${d[1]}" loading="lazy"></div><div class="stacked-card"><img src="${d[2]}" loading="lazy"></div><div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full font-semibold">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full font-semibold">Available</span>'}</div><div class="image-count-badge"><i class="fas fa-images"></i> ৩টি</div><img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="watermark-logo" alt="রুচিতা"></div>
+        <div class="p-4 flex flex-col flex-grow"><h3 class="text-lg font-bold text-stone-800 font-bn">${p.nameBn}</h3><p class="text-xs text-stone-400 font-serif">${p.nameEn}</p><p class="text-sm text-stone-600 mt-2 font-bn">${p.descBn}</p><div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div><div class="flex gap-2 mt-4"><a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="jelly-btn wa-btn text-white py-3 px-4 text-sm font-semibold flex-1"><i class="fab fa-whatsapp"></i> অর্ডার</a><a href="https://m.me/ruchitasareeaura" target="_blank" class="jelly-btn msg-btn text-white py-3 px-4 text-sm font-semibold flex-1"><i class="fab fa-facebook-messenger"></i> Messenger</a></div></div>`;
         pg.appendChild(c);
       });
     }
