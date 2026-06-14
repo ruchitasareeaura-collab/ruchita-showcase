@@ -18,8 +18,8 @@
     ::-webkit-scrollbar{width:4px}
     ::-webkit-scrollbar-track{background:#f3ede6}
     ::-webkit-scrollbar-thumb{background:#c4a88b;border-radius:8px}
-    .watermark-logo{position:absolute;bottom:8px;left:8px;width:36px;height:36px;border-radius:50%;opacity:.85;z-index:20;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.15);background:rgba(255,255,255,.7);padding:3px;object-fit:contain}
-    @media(min-width:640px){.watermark-logo{width:46px;height:46px;bottom:10px;left:10px}}
+    .watermark-logo{position:absolute;bottom:10px;right:10px;width:32px;height:32px;border-radius:50%;opacity:.9;z-index:20;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.2);background:rgba(255,255,255,.8);padding:2px;object-fit:contain}
+    @media(min-width:640px){.watermark-logo{width:42px;height:42px}}
     .category-pill{transition:all .25s;cursor:pointer;white-space:nowrap}
     .category-pill.active{background:#8b5e3c!important;color:#fff!important;border-color:#8b5e3c!important;box-shadow:0 4px 12px rgba(139,94,60,.25)}
     .faq-content{max-height:0;overflow:hidden;transition:max-height .4s}
@@ -28,23 +28,161 @@
     .hero-gradient{background:linear-gradient(135deg,#f5ede2 0%,#e8d5c0 30%,#d4b896 70%,#c4a88b 100%)}
     .footer-gradient{background:linear-gradient(180deg,#1a1510 0%,#2c2416 50%,#3d3220 100%)}
     .footer-glow{box-shadow:0 -4px 30px rgba(139,94,60,0.15)}
-    @media(max-width:640px){.category-scroll{-webkit-overflow-scrolling:touch;scrollbar-width:none}.category-scroll::-webkit-scrollbar{display:none}}
 
-    /* ===== NEW PREMIUM CSS ===== */
-    .stacked-card-group{position:relative;width:100%;aspect-ratio:3/4;cursor:pointer;perspective:1200px}
-    .stacked-card{position:absolute;inset:0;border-radius:1.25rem;overflow:hidden;transition:all 0.5s cubic-bezier(0.23,1,0.32,1);box-shadow:0 20px 40px -12px rgba(0,0,0,0.25);background:#fff}
-    .stacked-card img{width:100%;height:100%;object-fit:cover}
-    .stacked-card:nth-child(1){z-index:3;transform:rotate(0deg) translateZ(0)}
-    .stacked-card:nth-child(2){z-index:2;transform:rotate(-3deg) translateX(-6%) translateY(2%) scale(0.95);opacity:0.9}
-    .stacked-card:nth-child(3){z-index:1;transform:rotate(4deg) translateX(8%) translateY(-1%) scale(0.90);opacity:0.8}
-    .stacked-card-group:hover .stacked-card:nth-child(1){transform:rotate(-2deg) translateX(-2%) scale(1.03);box-shadow:0 30px 50px -10px rgba(0,0,0,0.35)}
-    .stacked-card-group:hover .stacked-card:nth-child(2){transform:rotate(-8deg) translateX(-18%) translateY(-4%) scale(0.92);opacity:1;box-shadow:0 25px 45px -10px rgba(139,94,60,0.3)}
-    .stacked-card-group:hover .stacked-card:nth-child(3){transform:rotate(10deg) translateX(22%) translateY(6%) scale(0.88);opacity:1;box-shadow:0 25px 45px -10px rgba(139,94,60,0.25)}
-    #productShowcase > .product-card:first-child{grid-column:span 2}
-    @media(max-width:1023px){#productShowcase > .product-card:first-child{grid-column:span 1}}
-    .crystal-split-btn{display:flex;border-radius:3rem;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.4),0 0 0 1px rgba(255,255,255,0.15);background:linear-gradient(180deg,rgba(255,255,255,0.25) 0%,transparent 50%)}
-    .crystal-split-btn .wa-part{flex:1;background:linear-gradient(135deg,#1ebe57 0%,#0d8040 100%);box-shadow:inset 0 2px 4px rgba(255,255,255,0.35),inset 0 -2px 4px rgba(0,0,0,0.15);color:#fff;padding:0.85rem 1rem;font-weight:600;font-size:0.85rem;text-align:center;transition:all 0.2s;letter-spacing:0.02em}
-    .crystal-split-btn .msg-part{width:24%;background:linear-gradient(135deg,#0099ff 0%,#0066cc 100%);box-shadow:inset 0 2px 4px rgba(255,255,255,0.3),inset 0 -2px 4px rgba(0,0,0,0.15);color:#fff;padding:0.85rem 0.5rem;font-weight:600;font-size:0.85rem;text-align:center;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+    /* ===== 3D STACKED CARD V2 ===== */
+    .stacked-card-group {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/5;
+      cursor: pointer;
+      perspective: 1200px;
+      margin-bottom: 0.5rem;
+    }
+    .stacked-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3);
+      background: #fff;
+    }
+    .stacked-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    .stacked-card:nth-child(1) {
+      z-index: 3;
+      transform: rotate(0deg) translateZ(0);
+    }
+    .stacked-card:nth-child(2) {
+      z-index: 2;
+      transform: rotate(-5deg) translateX(-10%) translateY(3%) scale(0.93);
+      opacity: 0.85;
+      filter: brightness(0.9);
+    }
+    .stacked-card:nth-child(3) {
+      z-index: 1;
+      transform: rotate(6deg) translateX(12%) translateY(-2%) scale(0.88);
+      opacity: 0.75;
+      filter: brightness(0.85);
+    }
+    /* সিনেমাটিক প্যারালাক্স হোভার */
+    .stacked-card-group:hover .stacked-card:nth-child(1) img {
+      transform: scale(1.08);
+    }
+    .stacked-card-group:hover .stacked-card:nth-child(1) {
+      transform: rotate(-2deg) translateX(-2%) scale(1.04);
+      box-shadow: 0 35px 55px -10px rgba(0,0,0,0.4);
+    }
+    .stacked-card-group:hover .stacked-card:nth-child(2) {
+      transform: rotate(-10deg) translateX(-22%) translateY(-6%) scale(0.9);
+      opacity: 1;
+      filter: brightness(1);
+      box-shadow: 0 28px 48px -10px rgba(139,94,60,0.35);
+    }
+    .stacked-card-group:hover .stacked-card:nth-child(3) {
+      transform: rotate(12deg) translateX(28%) translateY(8%) scale(0.85);
+      opacity: 1;
+      filter: brightness(1);
+      box-shadow: 0 28px 48px -10px rgba(139,94,60,0.3);
+    }
+
+    /* ফেড-ইন অ্যানিমেশন */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .product-card {
+      animation: fadeInUp 0.6s ease forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:nth-child(1) { animation-delay: 0.05s; }
+    .product-card:nth-child(2) { animation-delay: 0.1s; }
+    .product-card:nth-child(3) { animation-delay: 0.15s; }
+    .product-card:nth-child(4) { animation-delay: 0.2s; }
+
+    /* ইমেজ কাউন্ট ব্যাজ */
+    .image-count-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 15;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* লাইটবক্স */
+    #lightbox {
+      transition: opacity 0.3s ease;
+    }
+    .lightbox-counter {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      z-index: 5;
+    }
+
+    /* ক্রিস্টাল স্প্লিট বাটন */
+    .crystal-split-btn {
+      display: flex;
+      border-radius: 3rem;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.4);
+      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 50%);
+    }
+    .wa-part {
+      flex: 1;
+      background: linear-gradient(135deg, #1ebe57 0%, #0d8040 100%);
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.35);
+      color: #fff;
+      padding: 0.8rem 1rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-align: center;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .msg-part {
+      width: 24%;
+      background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%);
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 0.8rem 0.5rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* রেসপনসিভ গ্রিড */
+    @media(max-width:640px){
+      .stacked-card-group { aspect-ratio: 3/4.5; }
+      .category-scroll{-webkit-overflow-scrolling:touch;scrollbar-width:none}
+      .category-scroll::-webkit-scrollbar{display:none}
+    }
   </style>
 </head>
 <body class="antialiased">
@@ -55,10 +193,7 @@
         images: [
           "https://drive.google.com/thumbnail?id=1qDb3KZgOoUNUMNz9EGS7HJBxPkzv5HXB&sz=w600",
           "https://drive.google.com/thumbnail?id=1MrzqzjMpRShJ00ciSGwrddd-gSUl5jnv&sz=w600",
-          "https://i.postimg.cc/sQMNgq13/2-20260612-012545-0001.jpg",
-          "https://i.postimg.cc/wMKSFTt3/20260612-031109-0000.jpg",
-          "https://i.postimg.cc/mZH49KcK/Tangail-Monipuri015.jpg",
-          "https://i.postimg.cc/v8WjbyxF/IMG-20260506-024636-1.jpg"
+          "https://i.postimg.cc/sQMNgq13/2-20260612-012545-0001.jpg"
         ], stock:"Available", category:"Original Tangail Monipuri", descBn:"হাফ সিল্ক, চমৎকার নকশা।", descEn:"Half silk, exquisite design." },
       { id:2, nameBn:"টাঙ্গাইল হাফ সিল্ক বুট্টি", nameEn:"Tangail Half Silk Buti", regPrice:1500, offerPrice:1400,
         images: ["https://drive.google.com/thumbnail?id=1UaIpohYwlM3rHSo3JqBUN_yB1-bOI5mi&sz=w600"],
@@ -84,7 +219,7 @@
 
   <section class="hero-gradient pt-12 pb-10 sm:pt-20 sm:pb-16 text-center px-4 relative overflow-hidden">
     <div class="relative z-10 max-w-3xl mx-auto">
-      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w200" alt="রুচিতা" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full mx-auto mb-5 object-contain bg-white/80 p-2 shadow-xl backdrop-blur">
+      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w200" alt="রুচিতা" class="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-4 object-contain bg-white/80 p-2 shadow-xl">
       <h1 class="text-4xl sm:text-6xl font-bold text-stone-800 font-bn tracking-tight">রুচিতা™</h1>
       <p class="text-base sm:text-xl font-serif text-stone-600 mt-2 tracking-widest uppercase italic">Ruchita Saree Aura</p>
       <div class="w-16 h-0.5 bg-[#8b5e3c] mx-auto mt-4"></div>
@@ -94,7 +229,7 @@
   </section>
 
   <section class="sticky top-16 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-3">
-    <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll" id="categoryContainer">
+    <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll">
       <button class="category-pill active px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="all">সব <span class="font-en text-[10px] block">All</span></button>
       <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
       <button class="category-pill px-4 py-2 rounded-full border text-sm bg-white font-semibold" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
@@ -103,20 +238,21 @@
     </div>
   </section>
 
-  <!-- ========== NEW PREMIUM PRODUCT SHOWCASE ========== -->
+  <!-- ========== PRODUCT SHOWCASE ========== -->
   <section id="collection" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-    <div class="text-center mb-10 sm:mb-14">
-      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-stone-800 font-bn tracking-tight leading-none">আমাদের সংগ্রহ</h2>
-      <p class="text-xs sm:text-sm text-stone-400 font-serif tracking-[0.25em] uppercase mt-2">Our Collection</p>
+    <div class="text-center mb-10">
+      <h2 class="text-3xl sm:text-5xl font-bold text-stone-800 font-bn leading-none">আমাদের সংগ্রহ</h2>
+      <p class="text-xs text-stone-400 font-serif tracking-[0.25em] uppercase mt-2">Our Collection</p>
       <div class="w-12 h-0.5 bg-[#8b5e3c] mx-auto mt-4"></div>
     </div>
-    <div id="productShowcase" class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8"></div>
+    <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
     <div id="noProducts" class="hidden text-center py-16 text-stone-400"><i class="fas fa-box-open text-4xl mb-3"></i><p class="text-lg">কোনো পণ্য নেই</p></div>
     <!-- LIGHTBOX -->
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
       <button class="absolute top-4 right-4 text-white/70 hover:text-white text-3xl z-10">&times;</button>
       <div class="max-w-5xl w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
         <div id="lightboxContent" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
       </div>
     </div>
   </section>
@@ -141,23 +277,12 @@
     <div class="space-y-3" id="faqContainer"></div>
   </section>
 
-  <footer class="footer-gradient footer-glow text-stone-200 py-10 sm:py-14 px-4 relative overflow-hidden">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full"></div>
-    <div class="relative z-10 max-w-5xl mx-auto text-center">
-      <div class="flex items-center justify-center gap-4 mb-6">
-        <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w120" alt="রুচিতা" class="w-14 h-14 rounded-full object-contain bg-white p-1 shadow-lg ring-2 ring-amber-400/50">
-        <div><span class="text-2xl font-bold text-amber-300 font-bn">রুচিতা™</span><p class="text-xs text-stone-400 font-serif">Ruchita Saree Aura</p></div>
-      </div>
-      <div class="flex justify-center gap-4 text-xl mb-4">
-        <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-        <a href="https://surl.li/ljtecz" target="_blank" class="text-stone-400 hover:text-white"><i class="fab fa-whatsapp"></i></a>
-      </div>
-      <p class="text-xs text-stone-500 font-serif">© 2026 Ruchita Saree Aura</p>
-    </div>
+  <footer class="footer-gradient footer-glow text-stone-200 py-10 px-4 text-center">
+    <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" alt="রুচিতা" class="w-12 h-12 rounded-full mx-auto mb-3 bg-white p-1">
+    <p class="text-lg font-bold text-amber-300 font-bn">রুচিতা™</p>
+    <p class="text-xs text-stone-400 font-serif">© 2026 Ruchita Saree Aura</p>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script>
     const pg=document.getElementById('productShowcase'),np=document.getElementById('noProducts');
     function renderShowcase(f='all'){
@@ -165,38 +290,45 @@
       pg.innerHTML='';
       if(!fd.length){np.classList.remove('hidden');pg.classList.add('hidden');return}
       np.classList.add('hidden');pg.classList.remove('hidden');
-      fd.forEach((p,idx)=>{
+      fd.forEach((p)=>{
         const imgs=p.images||[p.image];
         const display=[]; for(let i=0;i<3;i++) display.push(imgs[i%imgs.length]);
         const c=document.createElement('div');
         c.className='product-card bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-stone-200/60 shadow-xl flex flex-col';
         c.innerHTML=`
-          <div class="stacked-card-group" onclick="openLightbox(${JSON.stringify(display).replace(/"/g,'&quot;')})">
-            <div class="stacked-card"><img src="${display[0]}" alt="Main"></div>
-            <div class="stacked-card"><img src="${display[1]}" alt="Pallu"></div>
-            <div class="stacked-card"><img src="${display[2]}" alt="Blouse"></div>
-            <div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-[10px] px-3 py-1 rounded-full">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full">Available</span>'}</div>
-            <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="absolute bottom-3 left-3 w-9 h-9 rounded-full opacity-85 z-10 shadow-md bg-white/70 p-0.5 object-contain pointer-events-none" alt="রুচিতা">
+          <div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(display).replace(/"/g,'&quot;')})">
+            <div class="stacked-card"><img src="${display[0]}" alt="Front" loading="lazy"></div>
+            <div class="stacked-card"><img src="${display[1]}" alt="Middle" loading="lazy"></div>
+            <div class="stacked-card"><img src="${display[2]}" alt="Back" loading="lazy"></div>
+            <div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-[10px] px-3 py-1 rounded-full font-semibold">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full font-semibold">Available</span>'}</div>
+            <div class="image-count-badge"><i class="fas fa-images"></i> ৩টি</div>
+            <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="watermark-logo" alt="রুচিতা">
           </div>
           <div class="p-4 sm:p-5 flex flex-col flex-grow">
             <h3 class="text-lg sm:text-xl font-bold text-stone-800 font-bn leading-tight">${p.nameBn}</h3>
-            <p class="text-[11px] sm:text-xs text-stone-400 font-serif tracking-wide mt-0.5">${p.nameEn}</p>
-            <p class="text-xs sm:text-sm text-stone-600 mt-2 font-bn">${p.descBn}</p>
-            <p class="text-[10px] text-stone-400 font-serif italic">${p.descEn}</p>
+            <p class="text-[11px] text-stone-400 font-serif tracking-wide">${p.nameEn}</p>
+            <p class="text-xs text-stone-600 mt-2 font-bn">${p.descBn}</p>
             <div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div>
             <div class="crystal-split-btn mt-4">
-              <a href="#" onclick="event.preventDefault();openWA('${p.nameBn} — ${p.nameEn}')" class="wa-part flex items-center justify-center gap-2"><i class="fab fa-whatsapp"></i> অর্ডার করুন</a>
+              <a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="wa-part"><i class="fab fa-whatsapp"></i> অর্ডার করুন</a>
               <a href="https://m.me/ruchitasareeaura" target="_blank" class="msg-part"><i class="fab fa-facebook-messenger"></i></a>
             </div>
           </div>`;
         pg.appendChild(c);
       });
     }
-    window.openLightbox=function(imgs){const lb=document.getElementById('lightbox'),ct=document.getElementById('lightboxContent');if(!lb||!ct)return;let arr=typeof imgs==='string'?JSON.parse(imgs):imgs;ct.innerHTML=arr.map(i=>`<div class="rounded-2xl overflow-hidden shadow-2xl"><img src="${i}" class="w-full h-auto object-cover"></div>`).join('');lb.classList.remove('hidden');lb.classList.add('flex');document.body.style.overflow='hidden'}
+    window.openLightbox=function(imgs){
+      const lb=document.getElementById('lightbox'),ct=document.getElementById('lightboxContent'),counter=document.getElementById('lightboxCounter');
+      if(!lb)return;
+      let arr=typeof imgs==='string'?JSON.parse(imgs):imgs;
+      ct.innerHTML=arr.map((i,idx)=>`<div class="rounded-2xl overflow-hidden shadow-2xl"><img src="${i}" class="w-full h-auto object-cover" loading="lazy"><p class="text-white/60 text-xs text-center mt-1">${idx+1}/${arr.length}</p></div>`).join('');
+      counter.textContent=`মোট ${arr.length}টি ছবি`;
+      lb.classList.remove('hidden');lb.classList.add('flex');document.body.style.overflow='hidden';
+    }
     window.closeLightbox=function(){const lb=document.getElementById('lightbox');if(!lb)return;lb.classList.add('hidden');lb.classList.remove('flex');document.body.style.overflow=''}
     window.openWA=function(name){window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('আসসালামু আলাইকুম,\n\nআমি আগ্রহী:\nপণ্য: '+name+'\n\nদয়া করে জানাবেন:\n• Available colors\n• Current price\n• Delivery details\n\nধন্যবাদ।')}`,'_blank')}
     document.querySelectorAll('.category-pill').forEach(b=>{b.addEventListener('click',function(){document.querySelectorAll('.category-pill').forEach(x=>x.classList.remove('active'));this.classList.add('active');renderShowcase(this.dataset.category)})});
-    const faqs=[{qBn:"ডেলিভারি কতদিনে?",qEn:"Delivery time?",aBn:"ঢাকায় ২-৩ দিন, বাইরে ৩-৫ দিন।",aEn:"2-3 days Dhaka, 3-5 outside."},{qBn:"রিটার্ন পলিসি?",qEn:"Return policy?",aBn:"২৪ ঘণ্টার মধ্যে জানালেই সহজ রিটার্ন/এক্সচেঞ্জ।",aEn:"Easy return within 24hrs."},{qBn:"COD?",qEn:"Cash on Delivery?",aBn:"হ্যাঁ, সারা বাংলাদেশে।",aEn:"Yes, all Bangladesh."}];
+    const faqs=[{qBn:"ডেলিভারি কতদিনে?",qEn:"Delivery time?",aBn:"ঢাকায় ২-৩ দিন, বাইরে ৩-৫ দিন।",aEn:"2-3 days Dhaka, 3-5 outside."},{qBn:"রিটার্ন পলিসি?",qEn:"Return policy?",aBn:"২৪ ঘণ্টার মধ্যে জানালে সহজ রিটার্ন/এক্সচেঞ্জ।",aEn:"Easy return within 24hrs."},{qBn:"COD?",qEn:"Cash on Delivery?",aBn:"হ্যাঁ, সারা বাংলাদেশে।",aEn:"Yes, all Bangladesh."}];
     (function(){const c=document.getElementById('faqContainer');faqs.forEach(f=>{const d=document.createElement('div');d.className='faq-item bg-white border rounded-xl overflow-hidden shadow-sm';d.innerHTML=`<button class="w-full flex justify-between p-4 text-left font-semibold"><span><span class="font-bn">${f.qBn}</span><span class="text-xs text-stone-500 font-serif block">${f.qEn}</span></span><i class="fas fa-plus faq-icon text-stone-400"></i></button><div class="faq-content px-4 text-sm"><p class="font-bn pb-1">${f.aBn}</p><p class="text-xs text-stone-500 font-serif">${f.aEn}</p></div>`;d.querySelector('button').addEventListener('click',()=>d.classList.toggle('open'));c.appendChild(d)})})();
     renderShowcase('all');
   </script>
