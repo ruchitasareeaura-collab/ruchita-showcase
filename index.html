@@ -28,28 +28,22 @@
     ::-webkit-scrollbar-track { background: #f3ede6; }
     ::-webkit-scrollbar-thumb { background: #c4a88b; border-radius: 8px; }
 
-    /* ===== SOCIAL ICON CIRCLES (FIXED) ===== */
+    /* ===== SOCIAL ICON CIRCLES (ONLY ICONS, VERTICAL) ===== */
     .social-icon-circle {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.4rem;
-      padding: 0.4rem 1rem 0.4rem 0.8rem;
-      border-radius: 2rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       color: #5c4a3a;
       transition: all 0.25s;
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-decoration: none;
-      width: fit-content;
       border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-    .social-icon-circle i {
-      font-size: 1.1rem;
-      width: 1.4rem;
-      text-align: center;
     }
     .social-icon-circle:hover {
       background: #ffffff;
@@ -89,7 +83,6 @@
     }
     .category-pill.active { background: #8b5e3c !important; color: #fff !important; border-color: #8b5e3c !important; }
 
-    /* ===== FOOTER GRADIENT (FIXED) ===== */
     .footer-gradient {
       background: linear-gradient(180deg, #1a1510 0%, #2c2416 50%, #3d3220 100%);
     }
@@ -155,7 +148,6 @@
     .wa-btn { background: linear-gradient(135deg, #1fd86a, #0e9a4e); }
     .msg-btn { background: linear-gradient(135deg, #0aa5ff, #0066d1); }
 
-    /* ===== HERO SECTION ===== */
     .hero-wrapper { width: 100%; padding: 0.75rem 0.75rem 0; background: #fbf7f2; }
     .hero-frame {
       position: relative;
@@ -332,10 +324,9 @@
     <p class="text-sm text-stone-700 max-w-2xl mx-auto font-bn">রুচিতা শাড়ি অরা বাংলার নিরবধি ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p>
   </section>
 
-  <!-- ===== FOOTER (FIXED - 3 COLUMNS SIDE BY SIDE) ===== -->
+  <!-- ===== FOOTER (FINAL: 3 COLUMNS, ICON ONLY, VERTICAL) ===== -->
   <footer class="footer-gradient text-stone-200 py-8 px-4 sm:px-8">
     <div class="max-w-5xl mx-auto">
-      <!-- 3 Columns Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-6">
         
         <!-- LEFT COLUMN: Contact + Address -->
@@ -353,24 +344,24 @@
           </p>
         </div>
 
-        <!-- MIDDLE COLUMN: Social Icons (Vertical) -->
+        <!-- MIDDLE COLUMN: Social Icons (Only Icons, Vertical) -->
         <div>
           <h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">🔗 সোশ্যাল মিডিয়া</h4>
-          <div class="flex flex-col gap-2.5">
+          <div class="flex flex-col gap-3">
             <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon-circle">
-              <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+              <i class="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="social-icon-circle">
-              <span class="font-en font-bold text-xs">G</span> <span>Google Group</span>
+              <span class="font-en font-bold text-xs">G</span>
             </a>
             <a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="social-icon-circle">
-              <i class="fab fa-instagram"></i> <span>Instagram</span>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="https://surl.li/ljtecz" target="_blank" class="social-icon-circle">
-              <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+              <i class="fab fa-whatsapp"></i>
             </a>
             <a href="https://x.com/RuchitaSaree01" target="_blank" class="social-icon-circle">
-              <i class="fab fa-x-twitter"></i> <span>Twitter/X</span>
+              <i class="fab fa-x-twitter"></i>
             </a>
           </div>
         </div>
