@@ -42,26 +42,31 @@
     .jelly-btn:active{transform:scale(.97)}
     .wa-btn{background:linear-gradient(135deg,#1fd86a,#0e9a4e)}
     .msg-btn{background:linear-gradient(135deg,#0aa5ff,#0066d1)}
-    /* পেইন্টিং-স্টাইল হিরো ব্যানার */
-    .hero-bg{
-      background:linear-gradient(135deg,rgba(245,237,226,0.7) 0%,rgba(232,213,192,0.5) 40%,rgba(200,170,140,0.6) 100%),url('https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg') center/cover no-repeat;
-      position:relative;
+
+    /* হিরো — ছবি fully visible */
+    .hero-bg {
+      background: url('https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg') center 30%/cover no-repeat;
+      position: relative;
     }
-    .hero-bg::before{
-      content:'';
-      position:absolute;inset:0;
-      background:radial-gradient(ellipse at 30% 50%,rgba(255,220,180,0.3) 0%,transparent 60%),
-                 radial-gradient(ellipse at 70% 30%,rgba(200,160,120,0.2) 0%,transparent 50%);
-      filter:blur(30px);
-      mix-blend-mode:overlay;
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(251,247,242,0) 50%, rgba(251,247,242,0.85) 100%);
+      pointer-events: none;
     }
-    .hero-bg::after{
-      content:'';
-      position:absolute;inset:0;
-      background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence baseFrequency="0.9"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.04"/></svg>');
-      pointer-events:none;
+    /* মোবাইলে ছবি fully visible */
+    @media(max-width:640px){
+      .hero-bg {
+        background: url('https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg') center 20%/cover no-repeat;
+      }
+      .hero-bg::after {
+        background: linear-gradient(180deg, rgba(251,247,242,0) 40%, rgba(251,247,242,0.9) 100%);
+      }
+      .stacked-card-group{aspect-ratio:3/4.5}
+      .category-scroll{overflow-x:auto;scrollbar-width:none}
+      .category-scroll::-webkit-scrollbar{display:none}
     }
-    @media(max-width:640px){.stacked-card-group{aspect-ratio:3/4.5}.category-scroll{overflow-x:auto;scrollbar-width:none}.category-scroll::-webkit-scrollbar{display:none}}
   </style>
 </head>
 <body class="antialiased">
@@ -73,17 +78,20 @@
       <a href="#" class="flex items-center gap-2.5 no-underline"><img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" alt="রুচিতা" class="w-9 h-9 rounded-full object-contain bg-white p-0.5 shadow-sm"><div><span class="text-lg font-bold text-[#8b5e3c] font-bn">রুচিতা™</span><span class="text-[10px] font-en text-stone-500 block">Ruchita Saree Aura</span></div></a>
     </div>
   </header>
-  <section class="hero-bg pt-10 pb-8 sm:pt-14 sm:pb-10 text-center px-4 relative overflow-hidden">
+
+  <!-- হিরো ব্যানার — ছবি পুরোপুরি দেখা যাবে -->
+  <section class="hero-bg pt-12 pb-14 sm:pt-16 sm:pb-16 text-center px-4 relative">
     <div class="relative z-10 max-w-2xl mx-auto">
-      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w140" alt="রুচিতা" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 object-contain bg-white/80 p-1.5 shadow-lg ring-1 ring-amber-300/30">
-      <h1 class="text-4xl sm:text-5xl font-bold text-stone-800 font-calligraphy leading-none drop-shadow-md">রুচিতা<sup class="text-sm sm:text-lg">™</sup></h1>
-      <p class="text-sm sm:text-lg font-serif text-stone-700 mt-1 tracking-[0.2em] uppercase italic drop-shadow-sm">Ruchita Saree Aura</p>
+      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w140" alt="রুচিতা" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 object-contain bg-white/85 p-1.5 shadow-lg ring-1 ring-amber-300/30">
+      <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 font-calligraphy leading-none drop-shadow-lg">রুচিতা<sup class="text-sm sm:text-lg">™</sup></h1>
+      <p class="text-sm sm:text-lg font-serif text-stone-800 mt-1 tracking-[0.2em] uppercase italic drop-shadow-sm">Ruchita Saree Aura</p>
       <div class="w-12 h-0.5 bg-[#8b5e3c] mx-auto mt-3"></div>
-      <p class="text-base sm:text-xl text-stone-800 mt-3 italic font-bn drop-shadow-sm">"রুচিশীলতার আরেক নাম"</p>
-      <p class="text-xs font-serif text-stone-600 mt-1 italic">"Another name for taste is Ruchita"</p>
+      <p class="text-base sm:text-xl text-stone-900 mt-3 italic font-bn drop-shadow-sm">"রুচিশীলতার আরেক নাম"</p>
+      <p class="text-xs font-serif text-stone-700 mt-1 italic drop-shadow-sm">"Another name for taste is Ruchita"</p>
       <div class="mt-5 flex justify-center gap-3"><a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-6 py-2.5 text-sm"><i class="fas fa-gem"></i> সংগ্রহ</a><a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-6 py-2.5 text-sm"><i class="fab fa-whatsapp text-lg"></i> অর্ডার</a></div>
     </div>
   </section>
+
   <section class="sticky top-14 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-2.5">
     <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll">
       <button class="category-pill active" data-category="all">সব</button><button class="category-pill" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button><button class="category-pill" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button><button class="category-pill" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button><button class="category-pill" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
