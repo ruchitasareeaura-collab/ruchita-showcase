@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
@@ -43,26 +43,68 @@
     .wa-btn{background:linear-gradient(135deg,#1fd86a,#0e9a4e)}
     .msg-btn{background:linear-gradient(135deg,#0aa5ff,#0066d1)}
 
-    /* হিরো — ছবি fully visible */
+    /* ===== এক্সপার্ট-লেভেল হিরো ===== */
     .hero-bg {
-      background: url('https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg') center 30%/cover no-repeat;
+      background: #fbf7f2;
       position: relative;
+      padding: 3rem 1rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .hero-bg::after {
+    /* লাগজারি ফ্রেমের মধ্যে ছবি — দূর থেকে, ক্লিয়ার */
+    .hero-frame {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.2), 0 0 0 6px rgba(212,184,150,0.5), 0 0 0 14px rgba(139,94,60,0.15);
+      background: #fff;
+    }
+    .hero-frame img {
+      width: 100%;
+      height: auto;
+      max-height: 65vh;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      filter: contrast(1.05) saturate(1.1) brightness(1.02);
+    }
+    /* ফ্রেমের ভেতর গোল্ডেন গ্রেডিয়েন্ট ওভারলে — নিচে টেক্সট পড়ার জন্য */
+    .hero-frame::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(251,247,242,0) 50%, rgba(251,247,242,0.85) 100%);
+      background: linear-gradient(180deg, rgba(251,247,242,0) 50%, rgba(251,247,242,0.7) 85%, rgba(251,247,242,0.95) 100%);
       pointer-events: none;
     }
-    /* মোবাইলে ছবি fully visible */
+    /* টেক্সট ব্লক — ফ্রেমের নিচে, স্পষ্ট, কালারফুল */
+    .hero-text-block {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      text-align: center;
+      padding: 0 2rem;
+    }
+    .hero-logo-small {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(255,255,255,0.9);
+      padding: 5px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      margin: 0 auto 0.5rem;
+    }
     @media(max-width:640px){
-      .hero-bg {
-        background: url('https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg') center 20%/cover no-repeat;
-      }
-      .hero-bg::after {
-        background: linear-gradient(180deg, rgba(251,247,242,0) 40%, rgba(251,247,242,0.9) 100%);
-      }
+      .hero-bg { padding: 1.5rem 0.75rem 3rem; }
+      .hero-frame { border-radius: 1.8rem; box-shadow: 0 20px 50px rgba(0,0,0,0.2), 0 0 0 4px rgba(212,184,150,0.5), 0 0 0 10px rgba(139,94,60,0.15); }
+      .hero-frame img { max-height: 50vh; object-position: center 20%; }
+      .hero-text-block { bottom: 0.75rem; padding: 0 1rem; }
+      .hero-logo-small { width: 42px; height: 42px; }
       .stacked-card-group{aspect-ratio:3/4.5}
       .category-scroll{overflow-x:auto;scrollbar-width:none}
       .category-scroll::-webkit-scrollbar{display:none}
@@ -79,11 +121,54 @@
     </div>
   </header>
 
-  <!-- হিরো ব্যানার — ছবি পুরোপুরি দেখা যাবে -->
-  <section class="hero-bg pt-12 pb-14 sm:pt-16 sm:pb-16 text-center px-4 relative">
-    <div class="relative z-10 max-w-2xl mx-auto">
-      <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w140" alt="রুচিতা" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full mx-auto mb-3 object-contain bg-white/85 p-1.5 shadow-lg ring-1 ring-amber-300/30">
-      <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 font-calligraphy leading-none drop-shadow-lg">রুচিতা<sup class="text-sm sm:text-lg">™</sup></h1>
+  <!-- হিরো ব্যানার — লাগজারি ফ্রেম + দূর থেকে ছবি + স্পষ্ট টেক্সট -->
+  <section class="hero-bg">
+    <div class="hero-frame">
+      <img src="https://i.postimg.cc/BZD1rcVX/FB-IMG-1781539151513.jpg" alt="রুচিতা মডেল">
+      <div class="hero-text-block">
+        <img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w140" alt="রুচিতা" class="hero-logo-small">
+        <h1 class="text-3xl sm:text-5xl font-bold text-stone-900 font-calligraphy leading-none drop-shadow-md">রুচিতা<sup class="text-xs sm:text-base">™</sup></h1>
+        <p class="text-xs sm:text-base font-serif text-stone-800 mt-0.5 tracking-[0.2em] uppercase italic drop-shadow-sm">Ruchita Saree Aura</p>
+        <div class="w-10 h-0.5 bg-[#8b5e3c] mx-auto mt-2"></div>
+        <p class="text-sm sm:text-lg text-stone-900 mt-2 italic font-bn drop-shadow-sm">"রুচিশীলতার আরেক নাম"</p>
+        <p class="text-[10px] sm:text-xs font-serif text-stone-700 mt-0.5 italic">"Another name for taste is Ruchita"</p>
+        <div class="mt-4 flex justify-center gap-3"><a href="#collection" class="jelly-btn bg-[#8b5e3c] text-white px-5 py-2.5 text-xs sm:text-sm"><i class="fas fa-gem"></i> সংগ্রহ</a><a href="#" onclick="openWA('general')" class="jelly-btn wa-btn text-white px-5 py-2.5 text-xs sm:text-sm"><i class="fab fa-whatsapp"></i> অর্ডার</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sticky top-14 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-2.5">
+    <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto category-scroll">
+      <button class="category-pill active" data-category="all">সব</button><button class="category-pill" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button><button class="category-pill" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button><button class="category-pill" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button><button class="category-pill" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
+    </div>
+  </section>
+  <section id="collection" class="max-w-7xl mx-auto px-4 py-8 sm:py-10">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center font-bn mb-1">আমাদের সংগ্রহ</h2>
+    <p class="text-xs text-center text-stone-400 font-serif tracking-[0.2em] uppercase mb-6">Our Collection</p>
+    <div id="productShowcase" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div id="noProducts" class="hidden text-center py-16 text-stone-400">কোনো পণ্য নেই</div>
+  </section>
+  <section class="bg-[#f7f1e9] py-8 px-4 text-center"><h2 class="text-xl font-bold font-bn mb-2">আমাদের সম্পর্কে</h2><p class="text-xs text-stone-500 font-serif mb-3">About Us</p><p class="text-sm text-stone-700 max-w-2xl mx-auto font-bn">রুচিতা শাড়ি অরা বাংলার নিরবধি ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p></section>
+  <footer class="footer-gradient text-stone-200 py-8 px-4 sm:px-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6">
+      <div><h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">📞 যোগাযোগ</h4><ul class="space-y-1.5 text-xs text-stone-300"><li><i class="fab fa-whatsapp mr-1.5"></i> +880 1885-092595</li><li><i class="fas fa-envelope mr-1.5"></i> ruchitasaree0622@gmail.com</li></ul></div>
+      <div><h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">📍 ঠিকানা</h4><p class="text-xs text-stone-300">রুচিতা™ Ruchita Saree Aura<br>Shekhertek 10, Adabar<br>Dhaka 1207, Bangladesh</p><div class="flex gap-2.5 mt-3"><a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon-circle"><i class="fab fa-facebook-f"></i></a><a href="https://www.facebook.com/share/g/18VQsJhz7M/" target="_blank" class="social-icon-circle"><span class="font-en font-bold text-xs">G</span></a><a href="https://www.instagram.com/ruchitasareeaura?igsh=MTByM2w5OW1hNWZqNg==" target="_blank" class="social-icon-circle"><i class="fab fa-instagram"></i></a><a href="https://surl.li/ljtecz" target="_blank" class="social-icon-circle"><i class="fab fa-whatsapp"></i></a><a href="https://x.com/RuchitaSaree01" target="_blank" class="social-icon-circle"><i class="fab fa-x-twitter"></i></a></div></div>
+      <div><h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">🚚 শিপিং ও রিটার্ন</h4><ul class="space-y-1.5 text-xs text-stone-300"><li>✓ ঢাকার মধ্যে: ৳80</li><li>✓ ঢাকার বাইরে: ৳120</li><li>✓ 7-Day Return & Exchange</li></ul></div>
+    </div>
+    <div class="text-center border-t border-stone-700/50 pt-4"><p class="text-[10px] text-stone-500 font-serif">© 2026 Ruchita Saree Aura. All Rights Reserved.</p></div>
+  </footer>
+  <script>
+    const pg=document.getElementById('productShowcase'),np=document.getElementById('noProducts');
+    function renderShowcase(f='all'){const fd=f==='all'?products:products.filter(p=>p.category===f);pg.innerHTML='';if(!fd.length){np.classList.remove('hidden');pg.classList.add('hidden');return}np.classList.add('hidden');pg.classList.remove('hidden');fd.forEach(p=>{const imgs=p.images||[p.image];const d=[];for(let i=0;i<3;i++)d.push(imgs[i%imgs.length]);const c=document.createElement('div');c.className='product-card bg-white rounded-3xl overflow-hidden border shadow-xl flex flex-col';c.innerHTML=`<div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(d).replace(/"/g,'&quot;')})"><div class="stacked-card"><img src="${d[0]}" loading="lazy"></div><div class="stacked-card"><img src="${d[1]}" loading="lazy"></div><div class="stacked-card"><img src="${d[2]}" loading="lazy"></div><div class="absolute top-3 left-3 z-10">${p.stock==='Sold Out'?'<span class="bg-red-100 text-red-700 text-xs px-3 py-1 rounded-full">Sold Out</span>':'<span class="bg-emerald-100 text-emerald-700 text-xs px-3 py-1 rounded-full">Available</span>'}</div><div class="image-count-badge"><i class="fas fa-images"></i> ৩টি</div><img src="https://drive.google.com/thumbnail?id=1Pas2l0FdhrhlXm9kPSp_pmsTp6YRImFt&sz=w100" class="watermark-logo" alt="রুচিতা"></div><div class="p-4 flex flex-col flex-grow"><h3 class="text-lg font-bold text-stone-800 font-bn">${p.nameBn}</h3><p class="text-xs text-stone-400 font-serif">${p.nameEn}</p><p class="text-sm text-stone-600 mt-2 font-bn">${p.descBn}</p><div class="mt-auto pt-4">${p.offerPrice?`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.offerPrice.toLocaleString()}</span> <span class="text-sm line-through text-stone-400">৳ ${p.regPrice.toLocaleString()}</span>`:`<span class="text-xl font-bold text-[#8b5e3c]">৳ ${p.regPrice.toLocaleString()}</span>`}</div><div class="flex gap-2 mt-4"><a href="#" onclick="event.preventDefault();openWA('${p.nameBn}')" class="jelly-btn wa-btn text-white py-3 px-4 text-sm font-semibold flex-1"><i class="fab fa-whatsapp"></i> অর্ডার</a><a href="https://m.me/ruchitasareeaura" target="_blank" class="jelly-btn msg-btn text-white py-3 px-4 text-sm font-semibold flex-1"><i class="fab fa-facebook-messenger"></i> Messenger</a></div></div>`;pg.appendChild(c)})}
+    function openLightbox(imgs){const lb=document.getElementById('lightbox'),ct=document.getElementById('lightboxContent');if(!lb)return;let arr=typeof imgs==='string'?JSON.parse(imgs):imgs;ct.innerHTML=arr.map((i,idx)=>`<div class="rounded-2xl overflow-hidden shadow-2xl"><img src="${i}" class="w-full" loading="lazy"><p class="text-white/60 text-xs text-center mt-1">${idx+1}/${arr.length}</p></div>`).join('');lb.classList.remove('hidden');lb.classList.add('flex');document.body.style.overflow='hidden'}
+    function closeLightbox(){const lb=document.getElementById('lightbox');if(!lb)return;lb.classList.add('hidden');lb.classList.remove('flex');document.body.style.overflow=''}
+    function openWA(n){window.open(`https://wa.me/8801885092595?text=${encodeURIComponent('আসসালামু আলাইকুম,\n\nপণ্য: '+n+'\n\nদয়া করে জানাবেন:\n• Available colors\n• Current price\n• Delivery details\n\nধন্যবাদ।')}`,'_blank')}
+    document.querySelectorAll('.category-pill').forEach(b=>b.addEventListener('click',function(){document.querySelectorAll('.category-pill').forEach(x=>x.classList.remove('active'));this.classList.add('active');renderShowcase(this.dataset.category)}));
+    renderShowcase('all');
+  </script>
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden items-center justify-center p-4" onclick="closeLightbox()"><button class="absolute top-4 right-4 text-white text-3xl">&times;</button><div id="lightboxContent" class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl" onclick="event.stopPropagation()"></div></div>
+</body>
+</html>   <h1 class="text-4xl sm:text-5xl font-bold text-stone-900 font-calligraphy leading-none drop-shadow-lg">রুচিতা<sup class="text-sm sm:text-lg">™</sup></h1>
       <p class="text-sm sm:text-lg font-serif text-stone-800 mt-1 tracking-[0.2em] uppercase italic drop-shadow-sm">Ruchita Saree Aura</p>
       <div class="w-12 h-0.5 bg-[#8b5e3c] mx-auto mt-3"></div>
       <p class="text-base sm:text-xl text-stone-900 mt-3 italic font-bn drop-shadow-sm">"রুচিশীলতার আরেক নাম"</p>
