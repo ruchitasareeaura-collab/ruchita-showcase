@@ -6,6 +6,8 @@
     <title>Ruchita Saree Aura</title>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts for Bengali -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* সাধারণ রিসেট */
@@ -13,32 +15,229 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Hind Siliguri', 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: #f4f4f4;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* মেইন কন্টেন্ট এরিয়া */
-        main {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
+            background-color: #fcf9f5; /* হালকা ক্রিম ব্যাকগ্রাউন্ড */
             color: #333;
         }
 
-        /* ফুটার স্টাইল (গাঢ় ব্রাউন) */
+        /* =========================================
+           ১. হেডার সেকশন
+           ========================================= */
+        .site-header {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px solid #f0e6d8;
+        }
+
+        .logo-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f3e8da;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #5c3a21;
+            border: 1px solid #e1d0bd;
+        }
+
+        .header-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #5c3a21;
+            line-height: 1.2;
+        }
+
+        .header-subtitle {
+            font-size: 12px;
+            color: #888;
+            font-weight: 400;
+        }
+
+        /* =========================================
+           ২. ক্যাটাগরি নেভিগেশন
+           ========================================= */
+        .category-nav {
+            background-color: #fdfaf6;
+            padding: 12px 15px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            border-bottom: 1px solid #f0e6d8;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-btn {
+            background-color: #fff;
+            color: #5c3a21;
+            border: 1px solid #e1d0bd;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .cat-btn.active {
+            background-color: #5c3a21;
+            color: #fff;
+            border-color: #5c3a21;
+        }
+
+        /* =========================================
+           ৩. হিরো ব্যানার সেকশন
+           ========================================= */
+        .hero-banner {
+            margin: 15px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            /* আপনার আসল ছবির লিংক নিচে বসাবেন */
+            background-image: url(
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* ব্যানারের ওপর কালো আভা (যাতে টেক্সট পরিষ্কার দেখা যায়) */
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.4); 
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #333;
+        }
+
+        .hero-logo {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5c3a21;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 32px;
+            color: #5c3a21;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .hero-content h2 {
+            font-size: 16px;
+            color: #5c3a21;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #4a2e1b;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn-save, .btn-order {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+        }
+
+        .btn-save { background-color: #5c3a21; }
+        .btn-order { background-color: #28a745; }
+
+        /* =========================================
+           ৪. কন্টেন্ট সেকশন (আমাদের সংগ্রহ / সম্পর্কে)
+           ========================================= */
+        .info-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .info-section h3 {
+            font-size: 22px;
+            color: #5c3a21;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .info-section span {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 15px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            background-color: #f7efe8;
+            border-radius: 20px;
+            margin: 0 15px 30px;
+            padding: 30px 20px;
+        }
+
+        /* =========================================
+           ৫. ফুটার (আপনার পছন্দের ৩ কলাম)
+           ========================================= */
         .custom-footer {
             background-color: #2b1e16; 
             color: #d1cbc5;
-            padding: 60px 20px 20px;
-            margin-top: auto;
+            padding: 50px 20px 20px;
         }
 
         .footer-container {
@@ -46,36 +245,33 @@
             margin: 0 auto;
         }
 
-        /* ৩ কলামের গ্রিড লেআউট */
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-bottom: 30px;
         }
 
-        /* হেডিং স্টাইল (হলুদ) */
         .footer-col h4 {
             color: #f3b63f; 
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
-        /* টেক্সট ও আইকন */
         .footer-col p, 
         .footer-col a {
-            font-size: 14px;
+            font-size: 13px;
             color: #d1cbc5;
             line-height: 1.8;
             text-decoration: none;
             display: flex;
             align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
             transition: color 0.3s ease;
         }
 
@@ -85,28 +281,26 @@
 
         .footer-col i {
             color: #a89b91;
-            margin-top: 5px;
-            font-size: 14px;
+            margin-top: 4px;
+            font-size: 13px;
             width: 16px;
             text-align: center;
         }
 
-        /* ঠিকানা */
         .address-text {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.8;
             color: #d1cbc5;
-            padding-left: 25px;
+            padding-left: 24px;
         }
 
         .check-icon {
             color: #d1cbc5 !important;
         }
 
-        /* কপিরাইট */
         .footer-bottom {
             text-align: center;
-            padding-top: 25px;
+            padding-top: 20px;
             border-top: 1px solid #423328;
             font-size: 12px;
             color: #8c7d73;
@@ -116,34 +310,77 @@
         @media (max-width: 768px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 25px;
             }
-            .custom-footer {
-                padding: 40px 20px 20px;
-            }
+            .hero-banner { height: 350px; }
+            .hero-content h1 { font-size: 26px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ১. হেডার -->
+    <header class="site-header">
+        <div class="logo-circle">ক্লি</div>
+        <div>
+            <div class="header-title">ক্লিডি™</div>
+            <div class="header-subtitle">Ruchita Saree Aura</div>
+        </div>
+    </header>
+
+    <!-- ২. ক্যাটাগরি -->
+    <nav class="category-nav">
+        <a href="#" class="cat-btn active">সব</a>
+        <a href="#" class="cat-btn">🪔 পূজা কালেকশন</a>
+        <a href="#" class="cat-btn">টাইপিক্যাল মিনিমালিস্ট</a>
+        <a href="#" class="cat-btn">হাফ সিল্ক বুটি</a>
+        <a href="#" class="cat-btn">ঢাকাই জামদানি</a>
+        <a href="#" class="cat-btn">হাফ সিল্ক জামদানি</a>
+    </nav>
+
+    <!-- ৩. হিরো ব্যানার -->
     <main>
-        <h2>Welcome to Ruchita Saree Aura</h2>
+        <section class="hero-banner">
+            <div class="hero-content">
+                <div class="hero-logo">ক্লি</div>
+                <h1>ক্লিডি</h1>
+                <h2>R U C H I T A &nbsp; S A R E E &nbsp; A U R A</h2>
+                <p>"রুচিশীলতার আরেক নাম"</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-save"><i class="fas fa-heart"></i> সেভ করুন</a>
+                    <a href="#" class="btn-order"><i class="fab fa-whatsapp"></i> অর্ডার করুন</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ৪. আমাদের সংগ্রহ -->
+        <section class="info-section">
+            <h3>আমাদের সংগ্রহ</h3>
+            <span>O U R &nbsp; C O L L E C T I O N</span>
+            <!-- এখানে আপনার প্রোডাক্টের গ্রিড বা ছবি বসাতে পারবেন -->
+        </section>
+
+        <!-- ৫. আমাদের সম্পর্কে -->
+        <section class="info-section about-section">
+            <h3>আমাদের সম্পর্কে</h3>
+            <span>A B O U T &nbsp; U S</span>
+            <p>রুচিতা শাড়ি অরা বাংলাদেশের নারীর নিবিড় ঐতিহ্য ও রুচিশীলতাকে উদযাপন করে।</p>
+        </section>
     </main>
 
-    <!-- ফুটার সেকশন -->
+    <!-- ৬. ফুটার (যোগাযোগ, ঠিকানা, শিপিং) -->
     <footer class="custom-footer">
         <div class="footer-container">
-            
             <div class="footer-grid">
                 
-                <!-- ১. যোগাযোগ -->
+                <!-- যোগাযোগ -->
                 <div class="footer-col">
                     <h4><i class="fas fa-phone-alt"></i> যোগাযোগ</h4>
                     <a href="tel:+8801885092595"><i class="fas fa-phone"></i> +880 1885-092595</a>
                     <a href="mailto:ruchitasaree0622@gmail.com"><i class="fas fa-envelope"></i> ruchitasaree0622@gmail.com</a>
                 </div>
 
-                <!-- ২. ঠিকানা -->
+                <!-- ঠিকানা -->
                 <div class="footer-col">
                     <h4><i class="fas fa-map-marker-alt"></i> ঠিকানা</h4>
                     <div class="address-text">
@@ -153,7 +390,7 @@
                     </div>
                 </div>
 
-                <!-- ৩. শিপিং ও রিটার্ন -->
+                <!-- শিপিং ও রিটার্ন -->
                 <div class="footer-col">
                     <h4><i class="fas fa-truck"></i> শিপিং ও রিটার্ন</h4>
                     <p><i class="fas fa-check check-icon"></i> ঢাকার মধ্যে: ৳৮০</p>
@@ -167,7 +404,6 @@
             <div class="footer-bottom">
                 &copy; 2026 Ruchita Saree Aura. All Rights Reserved.
             </div>
-
         </div>
     </footer>
 
