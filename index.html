@@ -326,10 +326,119 @@
 
   <script>
     const products = [
-      { id: 1, nameBn: "টাঙ্গাইল মনিপুরী", nameEn: "Tangail Monipuri", regPrice: 1450, offerPrice: 1350, images: ["https://drive.google.com/thumbnail?id=1qDb3KZgOoUNUMNz9EGS7HJBxPkzv5HXB&sz=w600", "https://drive.google.com/thumbnail?id=1MrzqzjMpRShJ00ciSGwrddd-gSUl5jnv&sz=w600", "https://i.postimg.cc/sQMNgq13/2-20260612-012545-0001.jpg"], stock: "Available", category: "Original Tangail Monipuri", descBn: "হাফ সিল্ক, চমৎকার নকশা।", descEn: "Half silk, exquisite design." },
-      { id: 2, nameBn: "টাঙ্গাইল হাফ সিল্ক বুট্টি", nameEn: "Tangail Half Silk Buti", regPrice: 1500, offerPrice: 1400, images: ["https://drive.google.com/thumbnail?id=1UaIpohYwlM3rHSo3JqBUN_yB1-bOI5mi&sz=w600"], stock: "Available", category: "Tangail Half Silk Buti", descBn: "টাঙ্গাইল মিসড কটন শাড়ি।", descEn: "Tangail mixed cotton, buti design." },
-      { id: 3, nameBn: "ঢাকাই জামদানি", nameEn: "Dhakai Jamdani", regPrice: 2500, offerPrice: 2400, images: ["https://i.postimg.cc/nzczpxpw/1781018775037.png"], stock: "Available", category: "Dhakai Jamdani", descBn: "১০০% হ্যান্ডলুম, কটন মিক্সড।", descEn: "100% handloom, cotton mixed." },
-      { id: 4, nameBn: "হাফ সিল্ক জামদানি", nameEn: "Half Silk Jamdani", regPrice: 1500, offerPrice: null, images: ["https://i.postimg.cc/MGLK5xcj/1781249538781-2.jpg"], stock: "Available", category: "Half Silk Jamdani", descBn: "হাফ সিল্ক, জামদানি মোটিফ।", descEn: "Half silk, Jamdani motif." },
+      // ১. টাঙ্গাইল মনিপুরী - ব্রাউন
+      { 
+        id: 1, 
+        nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – ব্রাউন", 
+        nameEn: "Tangail Monipuri Saree – Brown", 
+        regPrice: 1000, 
+        offerPrice: null, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_5489f30b-e95d-4b6f-a24d-12e7c4a52a7f.png?v=1792501228"], 
+        stock: "Available", 
+        category: "Original Tangail Monipuri", 
+        descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", 
+        descEn: "Tangail Monipuri half-silk saree with a distinctive design." 
+      },
+      // ২. টাঙ্গাইল মনিপুরী - রেড
+      { 
+        id: 2, 
+        nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – রেড", 
+        nameEn: "Tangail Monipuri Saree – Red", 
+        regPrice: 1000, 
+        offerPrice: null, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_9cc5607d-bf8a-46df-8b03-d11c07fb7071.jpg?v=1792634983"], 
+        stock: "Available", 
+        category: "Original Tangail Monipuri", 
+        descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", 
+        descEn: "Tangail Monipuri half-silk saree with a distinctive design." 
+      },
+      // ৩. টাঙ্গাইল হাফ সিল্ক বুট্টি
+      { 
+        id: 3, 
+        nameBn: "টাঙ্গাইল হাফ সিল্ক বুট্টি", 
+        nameEn: "Tangail Half Silk Buti", 
+        regPrice: 1400, 
+        offerPrice: null, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_0dc32840-648d-49e3-b9fe-ab31485bc0fd.png?v=1792501602"], 
+        stock: "Available", 
+        category: "Tangail Half Silk Buti", 
+        descBn: "বুট্টি নকশার টাঙ্গাইল শাড়ি।", 
+        descEn: "Tangail saree featuring a buti design." 
+      },
+      // ৪. টাঙ্গাইল জামদানি - নীল
+      { 
+        id: 4, 
+        nameBn: "টাঙ্গাইল জামদানি শাড়ি (নীল)", 
+        nameEn: "Tangail Jamdani Saree (Blue)", 
+        regPrice: 2000, 
+        offerPrice: null, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/17917.png?v=1792605480"], 
+        stock: "Available", 
+        category: "Dhakai Jamdani", 
+        descBn: "নীল রঙের টাঙ্গাইল জামদানি শাড়ি।", 
+        descEn: "Tangail Jamdani saree in blue." 
+      },
+      // ৫. তানাবানা সফট সিল্ক কাতান শাড়ি
+      { 
+        id: 5, 
+        nameBn: "তানাবানা সফট সিল্ক কাতান শাড়ি", 
+        nameEn: "Tanabana Soft Silk Katan Saree", 
+        regPrice: 3250, 
+        offerPrice: 2925, 
+        images: [
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_2650a747-3c18-4601-b3e9-bbd3224698a3.jpg?v=1792500025",
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_5658da62-b227-4268-bd2c-9ea6d1fe2d3d.jpg?v=1792500053",
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_343e36d6-963a-4fa2-b9dc-f525543bfa24.jpg?v=1792500053"
+        ], 
+        stock: "Available", 
+        category: "Soft Silk & Katan", 
+        descBn: "সফট সিল্ক কাতান শাড়ি, সঙ্গে ব্লাউজ পিস। (Purple/Ambrodary)", 
+        descEn: "TanaBanaa soft silk katan saree with blouse piece." 
+      },
+      // ৬. লাল সাদা শাড়ি
+      { 
+        id: 6, 
+        nameBn: "লাল সাদা শাড়ি (ট্র্যাডিশনাল)", 
+        nameEn: "Lal Sada - Traditional", 
+        regPrice: 1850, 
+        offerPrice: 1665, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0010.jpg?v=1792980488"], 
+        stock: "Available", 
+        category: "Soft Silk & Katan", 
+        descBn: "সাদা শাড়ি ও লাল পাড়, ক্রেপ সিল্ক।", 
+        descEn: "White + Red Border | Crepe Silk" 
+      },
+      // ৭. কাশ্মীরী কাতান শাড়ি
+      { 
+        id: 7, 
+        nameBn: "কাশ্মীরী কাতান শাড়ি", 
+        nameEn: "Kashmiri Katan Saree", 
+        regPrice: 2850, 
+        offerPrice: 2565, 
+        images: [
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_4c5ec610-335a-4aed-99a4-dd336976084e.png?v=1792497395",
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_6f058c65-b361-4ef4-bc85-b7345587c959.jpg?v=1792500765",
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_dfca172c-64c2-4dcc-939a-5442dd99cdd0.jpg?v=1792500825",
+          "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_25157c5b-75ab-43b9-a2b5-201c68e929f1.jpg?v=1792500709"
+        ], 
+        stock: "Available", 
+        category: "Soft Silk & Katan", 
+        descBn: "পিওর কাতান ম্যাটেরিয়ালের শাড়ি, মিনাকারী কাজ করা। (Magenta/Deep Purple)", 
+        descEn: "Pure katan saree with meenakari work and contrast blouse piece." 
+      },
+      // ৮. সফট কাতান ল্যাভেন্ডার
+      { 
+        id: 8, 
+        nameBn: "সফট কাতান ল্যাভেন্ডার", 
+        nameEn: "Soft Katan - Lavender", 
+        regPrice: 2050, 
+        offerPrice: 1845, 
+        images: ["https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367"], 
+        stock: "Available", 
+        category: "Soft Silk & Katan", 
+        descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", 
+        descEn: "Lavender Silk Soft Katan Saree." 
+      }
     ];
     const WHATSAPP_NUMBER = "8801885092595";
     const MESSENGER_USERNAME = "ruchitasareeaura";
@@ -374,7 +483,7 @@
       <button class="category-pill" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
       <button class="category-pill" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
       <button class="category-pill" data-category="Dhakai Jamdani">ঢাকাই জামদানি</button>
-      <button class="category-pill" data-category="Half Silk Jamdani">হাফ সিল্ক জামদানি</button>
+      <button class="category-pill" data-category="Soft Silk & Katan">সফট সিল্ক ও কাতান</button>
     </div>
   </section>
 
