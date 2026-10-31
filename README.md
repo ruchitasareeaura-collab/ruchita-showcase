@@ -60,7 +60,7 @@
 <div class="social-links-container">
     
     <!-- Facebook -->
-    <a href="https://www.facebook.com/share/1ZyJMqjUBj/ class="social-item" target="_blank">"
+    <a href="https://www.facebook.com/share/1ZyJMqjUBj/" class="social-item" target="_blank">"
         <i class="fab fa-facebook-f"></i>
         <span>Facebook</span>
     </a>
