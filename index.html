@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="bn">
-<head><meta name="google-site-verification" content="sopzjVEaAr765hkVus2_BoFFDrkVf-LkVvjEDXEhyZ0" />
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>রুচিতা™ | Ruchita Saree Aura - Premium Handloom Sarees</title>
   <meta name="description" content="রুচিতা™ (Ruchita Saree Aura) - টাঙ্গাইল মনিপুরী, ঢাকাই জামদানি, সফট সিল্ক ও কাতান শাড়ির প্রিমিয়াম কালেকশন। সারাদেশে ক্যাশ অন ডেলিভারি।">
   <meta name="theme-color" content="#fbf7f2">
 
-  <!-- Google Analytics (GA4) - এখানে আপনার ID বসান -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DH2P0SDLK"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-1DH2P0SDLK');
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,16 +21,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    /* [আগের সব CSS এখানে হুবহু থাকবে, যা আমি আগের বারে দিয়েছিলাম] */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Hind Siliguri', 'Noto Serif Bengali', sans-serif; background: #fbf7f2; color: #2c2416; scroll-behavior: smooth; }
     .font-en { font-family: 'Inter', sans-serif; } .font-bn { font-family: 'Noto Serif Bengali', 'Hind Siliguri', serif; font-weight: 600; } .font-serif { font-family: 'Playfair Display', 'Cormorant Garamond', serif; } .font-calligraphy { font-family: 'Tangerine', cursive; }
     ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-track { background: #f3ede6; } ::-webkit-scrollbar-thumb { background: #c4a88b; border-radius: 8px; }
+    
     .watermark-logo { position: absolute; bottom: 10px; right: 10px; width: 36px; height: 36px; border-radius: 50%; opacity: 0.9; z-index: 20; pointer-events: none; box-shadow: 0 2px 8px rgba(0,0,0,0.2); background: rgba(255,255,255,0.85); padding: 3px; object-fit: contain; }
     @media (min-width: 640px) { .watermark-logo { width: 44px; height: 44px; } }
+    
     .category-pill { transition: all 0.25s; cursor: pointer; white-space: nowrap; padding: 0.5rem 1.2rem; border-radius: 2rem; border: 1px solid #d6c8b8; background: #fff; color: #5c4a3a; font-weight: 600; font-size: 0.9rem; }
     .category-pill.active { background: #8b5e3c !important; color: #fff !important; border-color: #8b5e3c !important; }
+    
     .footer-gradient { background: linear-gradient(180deg, #1a1510 0%, #2c2416 50%, #3d3220 100%); }
+    
     .stacked-card-group { position: relative; width: 100%; aspect-ratio: 4 / 5; cursor: pointer; perspective: 1200px; margin-bottom: 0.5rem; }
     .stacked-card { position: absolute; inset: 0; border-radius: 1.5rem; overflow: hidden; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.3); background: #fff; }
     .stacked-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
@@ -40,13 +43,17 @@
     .stacked-card-group:hover .stacked-card:nth-child(1) { transform: rotate(-2deg) scale(1.03); box-shadow: 0 35px 55px -10px rgba(0,0,0,0.4); }
     .stacked-card-group:hover .stacked-card:nth-child(2) { transform: rotate(-8deg) translateX(-18%) translateY(-4%) scale(0.92); opacity: 1; box-shadow: 0 25px 45px -10px rgba(139,94,60,0.35); }
     .stacked-card-group:hover .stacked-card:nth-child(3) { transform: rotate(10deg) translateX(22%) translateY(6%) scale(0.88); opacity: 1; box-shadow: 0 25px 45px -10px rgba(139,94,60,0.3); }
+    
     .product-card { animation: fadeInUp 0.5s ease forwards; } @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    
     .image-count-badge { position: absolute; top: 10px; right: 10px; z-index: 15; background: rgba(0,0,0,0.5); backdrop-filter: blur(6px); color: #fff; font-size: 0.65rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
     .sold-out-overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.65); z-index: 18; display: flex; align-items: center; justify-content: center; border-radius: 1.5rem; }
     .sold-out-stamp { background: #d92d20; color: #fff; font-weight: 700; font-size: 1.1rem; padding: 0.6rem 1.6rem; border-radius: 0.5rem; transform: rotate(-12deg); box-shadow: 0 6px 20px rgba(0,0,0,0.4); letter-spacing: 0.1em; border: 2px solid #fff; }
     .sold-out-btn { background: #a8a8a8 !important; cursor: not-allowed !important; pointer-events: none; }
+    
     .jelly-btn { position: relative; overflow: hidden; border-radius: 3rem; font-weight: 600; box-shadow: 0 8px 28px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.5); background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 60%); transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; font-size: 0.9rem; padding: 0.75rem 1.5rem; text-decoration: none; border: none; cursor: pointer; }
     .jelly-btn:active { transform: scale(0.97); } .wa-btn { background: linear-gradient(135deg, #1fd86a, #0e9a4e); color: #fff; } .msg-btn { background: linear-gradient(135deg, #0aa5ff, #0066d1); color: #fff; }
+    
     .hero-wrapper { width: 100%; padding: 0.75rem 0.75rem 0; background: #fbf7f2; }
     .hero-frame { position: relative; width: 100%; max-width: 1100px; margin: 0 auto; border-radius: 2rem; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 0 4px rgba(212,184,150,0.5), 0 0 0 12px rgba(139,94,60,0.12); background: #1a1510; }
     .hero-image-container { position: relative; width: 100%; padding-bottom: 60%; overflow: hidden; background: #1a1510; }
@@ -63,6 +70,7 @@
     .hero-buttons { display: flex; justify-content: center; gap: 0.75rem; margin-top: 1rem; flex-wrap: wrap; }
     .hero-btn-primary { background: #8b5e3c !important; color: white !important; padding: 0.6rem 1.4rem !important; font-size: 0.85rem !important; }
     .hero-btn-wa { background: linear-gradient(135deg, #1fd86a, #0e9a4e) !important; color: white !important; padding: 0.6rem 1.4rem !important; font-size: 0.85rem !important; }
+    
     .follow-section { text-align: center; padding: 1rem 0; }
     .follow-title { color: #fff; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 1px; font-family: 'Inter', sans-serif; text-transform: uppercase; }
     .follow-white-box { background: #ffffff; border-radius: 1rem; padding: 1.5rem 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); gap: 1.2rem; max-width: 900px; margin: 0 auto 1.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
@@ -72,6 +80,7 @@
     .social-item:hover i { color: #b45f3a; }
     .social-item span { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Inter', sans-serif; }
     .footer-desc { color: #d6cdc0; font-size: 0.85rem; max-width: 700px; margin: 0 auto; line-height: 1.7; font-family: 'Hind Siliguri', sans-serif; }
+    
     @media (max-width: 480px) {
       .hero-wrapper { padding: 0.5rem 0.5rem 0; } .hero-frame { border-radius: 1.2rem; box-shadow: 0 12px 40px rgba(0,0,0,0.2), 0 0 0 3px rgba(212,184,150,0.4), 0 0 0 8px rgba(139,94,60,0.1); }
       .hero-image-container { padding-bottom: 65%; } .hero-logo-sm { width: 36px; height: 36px; } .hero-title { font-size: 2.6rem; } .hero-title sup { font-size: 1rem; }
@@ -85,33 +94,16 @@
 <body>
 
   <script>
-    // ২ ও ৬ নং কাজ: ৩০-৫০টি প্রোডাক্ট এবং ১০টি ক্যাটাগরির জন্য প্রস্তুত স্ট্রাকচার
     const products = [
-      // ১. টাঙ্গাইল মনিপুরী - ব্রাউন (Alt text added)
       { id: 1, nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – ব্রাউন", nameEn: "Tangail Monipuri Saree – Brown", regPrice: 1000, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_5489f30b-e95d-4b6f-a24d-12e7c4a52a7f.png?v=1792501228", alt: "ব্রাউন রঙের হাফ সিল্ক টাঙ্গাইল মনিপুরী শাড়ি"}], stock: "Available", category: "Original Tangail Monipuri", descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", descEn: "Tangail Monipuri half-silk saree with a distinctive design." },
-      // ২. টাঙ্গাইল মনিপুরী - রেড
       { id: 2, nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – রেড", nameEn: "Tangail Monipuri Saree – Red", regPrice: 1000, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_9cc5607d-bf8a-46df-8b03-d11c07fb7071.jpg?v=1792634983", alt: "লাল রঙের হাফ সিল্ক টাঙ্গাইল মনিপুরী শাড়ি"}], stock: "Available", category: "Original Tangail Monipuri", descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", descEn: "Tangail Monipuri half-silk saree with a distinctive design." },
-      // ৩. টাঙ্গাইল হাফ সিল্ক বুট্টি
       { id: 3, nameBn: "টাঙ্গাইল হাফ সিল্ক বুট্টি", nameEn: "Tangail Half Silk Buti", regPrice: 1400, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_0dc32840-648d-49e3-b9fe-ab31485bc0fd.png?v=1792501602", alt: "বুট্টি নকশার টাঙ্গাইল হাফ সিল্ক শাড়ি"}], stock: "Available", category: "Tangail Half Silk Buti", descBn: "বুট্টি নকশার টাঙ্গাইল শাড়ি।", descEn: "Tangail saree featuring a buti design." },
-      // ৪. টাঙ্গাইল জামদানি - নীল
       { id: 4, nameBn: "টাঙ্গাইল জামদানি শাড়ি (নীল)", nameEn: "Tangail Jamdani Saree (Blue)", regPrice: 2000, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/17917.png?v=1792605480", alt: "নীল রঙের টাঙ্গাইল জামদানি শাড়ি"}], stock: "Available", category: "Dhakai Jamdani", descBn: "নীল রঙের টাঙ্গাইল জামদানি শাড়ি।", descEn: "Tangail Jamdani saree in blue." },
-      // ৫. তানাবানা সফট সিল্ক কাতান শাড়ি
       { id: 5, nameBn: "তানাবানা সফট সিল্ক কাতান শাড়ি", nameEn: "Tanabana Soft Silk Katan Saree", regPrice: 3250, offerPrice: 2925, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_2650a747-3c18-4601-b3e9-bbd3224698a3.jpg?v=1792500025", alt: "তানাবানা পার্পল সফট সিল্ক কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_5658da62-b227-4268-bd2c-9ea6d1fe2d3d.jpg?v=1792500053", alt: "তানাবানা কাতান শাড়ির নকশা"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_343e36d6-963a-4fa2-b9dc-f525543bfa24.jpg?v=1792500053", alt: "তানাবানা কাতান শাড়ির বর্ডার"}], stock: "Available", category: "Soft Silk & Katan", descBn: "সফট সিল্ক কাতান শাড়ি, সঙ্গে ব্লাউজ পিস। (Purple/Ambrodary)", descEn: "TanaBanaa soft silk katan saree with blouse piece." },
-      // ৬. লাল সাদা শাড়ি
       { id: 6, nameBn: "লাল সাদা শাড়ি (ট্র্যাডিশনাল)", nameEn: "Lal Sada - Traditional", regPrice: 1850, offerPrice: 1665, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0010.jpg?v=1792980488", alt: "লাল সাদা ট্র্যাডিশনাল ক্রেপ সিল্ক শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "সাদা শাড়ি ও লাল পাড়, ক্রেপ সিল্ক।", descEn: "White + Red Border | Crepe Silk" },
-      // ৭. কাশ্মীরী কাতান শাড়ি
       { id: 7, nameBn: "কাশ্মীরী কাতান শাড়ি", nameEn: "Kashmiri Katan Saree", regPrice: 2850, offerPrice: 2565, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_4c5ec610-335a-4aed-99a4-dd336976084e.png?v=1792497395", alt: "ম্যাজেন্টা কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_6f058c65-b361-4ef4-bc85-b7345587c959.jpg?v=1792500765", alt: "ডিপ পার্পল কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_dfca172c-64c2-4dcc-939a-5442dd99cdd0.jpg?v=1792500825", alt: "কাশ্মীরী কাতান শাড়ির কাজ"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_25157c5b-75ab-43b9-a2b5-201c68e929f1.jpg?v=1792500709", alt: "কাশ্মীরী কাতান শাড়ির pallu"}], stock: "Available", category: "Soft Silk & Katan", descBn: "পিওর কাতান ম্যাটেরিয়ালের শাড়ি, মিনাকারী কাজ করা। (Magenta/Deep Purple)", descEn: "Pure katan saree with meenakari work and contrast blouse piece." },
-      // ৮. সফট কাতান ল্যাভেন্ডার
-      { id: 8, nameBn: "সফট কাতান ল্যাভেন্ডার", nameEn: "Soft Katan - Lavender", regPrice: 2050, offerPrice: 1845, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367", alt: "ল্যাভেন্ডার রঙের সফট কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", descEn: "Lavender Silk Soft Katan Saree." },
-      
-      /* 
-         👇 এখানে বাকি ২২-৪২টি প্রোডাক্টের কোড বসাবেন। 
-         আপনি চাইলে এই ব্লকটি কপি করে নতুন প্রোডাক্ট অ্যাড করতে পারেন।
-         ক্যাটাগরি অপশনগুলো: Silk, Cotton, Jamdani, Katan, Soft Silk, Half Silk, Tangail, Dhakai, Puja Special, New Arrivals
-      */
-      // { id: 9, nameBn: "নতুন শাড়ি", nameEn: "New Saree", regPrice: 1500, offerPrice: null, images: [{url: "IMAGE_LINK", alt: "ALT TEXT"}], stock: "Available", category: "Silk", descBn: "বর্ণনা...", descEn: "Description..." },
+      { id: 8, nameBn: "সফট কাতান ল্যাভেন্ডার", nameEn: "Soft Katan - Lavender", regPrice: 2050, offerPrice: 1845, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367", alt: "ল্যাভেন্ডার রঙের সফট কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", descEn: "Lavender Silk Soft Katan Saree." }
     ];
-    
     const WHATSAPP_NUMBER = "8801885092595";
     const MESSENGER_USERNAME = "ruchitasareeaura";
   </script>
@@ -155,7 +147,6 @@
   <section class="sticky top-14 z-40 bg-[#fbf7f2]/95 backdrop-blur-sm border-b py-2.5">
     <div class="max-w-7xl mx-auto px-4 flex gap-2 overflow-x-auto">
       <button class="category-pill active" data-category="all">সব</button>
-      <!-- ১০টি ক্যাটাগরি -->
       <button class="category-pill puja" data-category="Puja Collection">🪔 পূজা কালেকশন</button>
       <button class="category-pill" data-category="Original Tangail Monipuri">টাঙ্গাইল মনিপুরী</button>
       <button class="category-pill" data-category="Tangail Half Silk Buti">হাফ সিল্ক বুট্টি</button>
@@ -201,7 +192,6 @@
     </div>
 
     <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-8 mb-6 mt-8">
-      <!-- Col 1: Contact -->
       <div>
         <h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">📞 যোগাযোগ</h4>
         <ul class="space-y-1.5 text-xs text-stone-300">
@@ -209,12 +199,10 @@
           <li><i class="fas fa-envelope mr-1.5"></i> ruchitasaree0622@gmail.com</li>
         </ul>
       </div>
-      <!-- Col 2: Address -->
       <div>
         <h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">📍 ঠিকানা</h4>
         <p class="text-xs text-stone-300">রুচিতা™ Ruchita Saree Aura<br>Shekhertek 10, Adabar<br>Dhaka 1207, Bangladesh</p>
       </div>
-      <!-- Col 3: Quick Links (NEW) -->
       <div>
         <h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">🔗 দরকারি লিংক</h4>
         <ul class="space-y-1.5 text-xs text-stone-300">
@@ -224,7 +212,6 @@
           <li><a href="reviews.html" class="hover:text-amber-300">কাস্টমার রিভিউ</a></li>
         </ul>
       </div>
-      <!-- Col 4: Shipping -->
       <div>
         <h4 class="text-amber-300 font-bold text-sm mb-2 font-bn">🚚 শিপিং ও রিটার্ন</h4>
         <ul class="space-y-1.5 text-xs text-stone-300">
@@ -272,7 +259,6 @@
         const card = document.createElement('div');
         card.className = 'product-card bg-white/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-stone-200/60 shadow-xl flex flex-col';
         
-        // এখানে Alt Tag ব্যবহার করা হয়েছে
         card.innerHTML = `
           <div class="stacked-card-group relative" onclick="openLightbox(${JSON.stringify(display).replace(/"/g, '&quot;')})">
             <div class="stacked-card"><img src="${display[0].url}" alt="${display[0].alt}" loading="lazy"></div>
@@ -309,7 +295,6 @@
       const ct = document.getElementById('lightboxContent');
       if (!lb) return;
       let arr = typeof images === 'string' ? JSON.parse(images) : images;
-      // লাইটবক্সেও অল্ট ট্যাগ যোগ করা হলো
       ct.innerHTML = arr.map((img, idx) => `<div class="rounded-2xl overflow-hidden shadow-2xl"><img src="${img.url}" alt="${img.alt}" class="w-full h-auto object-cover" loading="lazy"><p class="text-white/60 text-xs text-center mt-1">${idx + 1}/${arr.length}</p></div>`).join('');
       lb.classList.remove('hidden'); lb.classList.add('flex'); document.body.style.overflow = 'hidden';
     };
