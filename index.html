@@ -74,12 +74,13 @@
             font-family: 'Hind Siliguri', sans-serif;
         }
 
-        /* Glossy Hero Image */
+        /* Glossy Hero Image (Fixed Size & Filters) */
         .hero-image {
-            filter: contrast(1.05) saturate(1.1);
+            filter: contrast(1.08) saturate(1.15) brightness(1.02);
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 20%;
         }
 
         /* 3D Stacked Card Design */
@@ -251,15 +252,15 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative w-full h-[60vh] md:h-[80vh] bg-brand-dark overflow-hidden flex items-center justify-center">
+    <!-- Hero Section (Height Adjusted) -->
+    <section class="relative w-full h-[45vh] md:h-[65vh] max-h-[600px] bg-brand-dark overflow-hidden flex items-center justify-center">
         <img src="https://i.postimg.cc/cHDn9NMt/20260616-132058-IMG-STYLE-2.jpg" alt="Ruchita Saree Aura Collection" class="hero-image absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/10 to-black/70 z-10"></div>
         
         <div class="relative z-20 text-center px-4">
-            <h2 class="text-white text-4xl md:text-6xl font-serif mb-4 drop-shadow-lg">Elegance Redefined</h2>
-            <p class="text-white text-lg md:text-xl font-light tracking-widest drop-shadow-md">Discover the finest Tangail & Katan Sarees</p>
-            <a href="#collection" class="inline-block mt-8 px-8 py-3 bg-brand-gold text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition duration-300 shadow-lg">Explore Collection</a>
+            <h2 class="text-white text-4xl md:text-6xl font-serif mb-4 drop-shadow-2xl">Elegance Redefined</h2>
+            <p class="text-white text-lg md:text-xl font-light tracking-widest drop-shadow-lg">Discover the finest Tangail & Katan Sarees</p>
+            <a href="#collection" class="inline-block mt-8 px-8 py-3 bg-brand-gold text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition duration-300 shadow-[0_0_15px_rgba(205,163,79,0.5)]">Explore Collection</a>
         </div>
     </section>
 
@@ -356,7 +357,7 @@
             { id: 7, nameBn: "কাশ্মীরী কাতান শাড়ি", nameEn: "Kashmiri Katan Saree", regPrice: 2850, offerPrice: 2565, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_4c5ec610-335a-4aed-99a4-dd336976084e.png?v=1792497395", alt: "ম্যাজেন্টা কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_6f058c65-b361-4ef4-bc85-b7345587c959.jpg?v=1792500765", alt: "ডিপ পার্পল কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_dfca172c-64c2-4dcc-939a-5442dd99cdd0.jpg?v=1792500825", alt: "কাশ্মীরী কাতান শাড়ির কাজ"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_25157c5b-75ab-43b9-a2b5-201c68e929f1.jpg?v=1792500709", alt: "কাশ্মীরী কাতান শাড়ির pallu"}], stock: "Available", category: "Soft Silk & Katan", descBn: "পিওর কাতান ম্যাটেরিয়ালের শাড়ি, মিনাকারী কাজ করা। (Magenta/Deep Purple)", descEn: "Pure katan saree with meenakari work and contrast blouse piece." },
             { id: 8, nameBn: "সফট কাতান ল্যাভেন্ডার", nameEn: "Soft Katan - Lavender", regPrice: 2050, offerPrice: 1845, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367", alt: "ল্যাভেন্ডার রঙের সফট কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", descEn: "Lavender Silk Soft Katan Saree." },
             
-            // নতুন প্রোডাক্ট
+            // নতুন প্রোডাক্ট (৪টি)
             { id: 9, nameBn: "চুন্দ্রী সিল্ক [বাটিক]", nameEn: "Chundri Silk [Batik]", regPrice: 2150, offerPrice: 1828, images: [{url: "https://placehold.co/600x800/8b2e3c/FFF?text=Chundri+Silk", alt: "চুন্দ্রী সিল্ক বাটিক শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "চুন্দ্রী সিল্ক বাটিক শাড়ি।", descEn: "Chundri Silk [Batik] Saree." },
             { id: 10, nameBn: "আসাম সিল্ক – রোজ পিঙ্ক", nameEn: "Assam Silk – Rose Pink", regPrice: 2050, offerPrice: 1743, images: [{url: "https://placehold.co/600x800/e91e63/FFF?text=Assam+Rose+Pink", alt: "আসাম সিল্ক রোজ পিঙ্ক শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "আসাম সিল্ক শাড়ি, রোজ পিঙ্ক কালার।", descEn: "Assam Silk Saree - Rose Pink." },
             { id: 11, nameBn: "আসাম সিল্ক – রয়েল ব্লু", nameEn: "Assam Silk – Royal Blue", regPrice: 2050, offerPrice: 1743, images: [{url: "https://placehold.co/600x800/1976d2/FFF?text=Assam+Royal+Blue", alt: "আসাম সিল্ক রয়েল ব্লু শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "আসাম সিল্ক শাড়ি, রয়েল ব্লু কালার।", descEn: "Assam Silk Saree - Royal Blue." },
