@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruchita Saree Aura | Premium Saree Collection</title>
     
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Ruchita Saree Aura - Another name of refine taste. Explore our exclusive collection of Tangail Jamdani, Monipuri, Soft Silk, and Katan sarees. Order directly via WhatsApp.">
     <meta name="keywords" content="Saree, Tangail Saree, Jamdani, Monipuri, Soft Silk, Katan, Ruchita Saree Aura, Bangladesh Saree Shop">
     
+    <!-- Open Graph -->
     <meta property="og:title" content="Ruchita Saree Aura">
     <meta property="og:description" content="Another name of refine taste.">
     <meta property="og:image" content="https://i.postimg.cc/cHDn9NMt/20260616-132058-IMG-STYLE-2.jpg">
@@ -21,34 +23,47 @@
       gtag('config', 'G-1DH2P0SDLK');
     </script>
 
+    <!-- Metricool Tracker -->
+    <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"YOUR_METRICOOL_HASH"})});</script>
+
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#2c1e16',
+                            primary: '#8b2e3c',
+                            gold: '#cda34f',
+                            light: '#fdfbf7',
+                            muted: '#6b635e'
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'bengali': ['"Hind Siliguri"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
-        /* === PURE CSS (No Tailwind) === */
-        :root {
-            --brand-dark: #2c1e16;
-            --brand-primary: #8b2e3c;
-            --brand-gold: #cda34f;
-            --brand-light: #fdfbf7;
-            --brand-muted: #6b635e;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Custom Styles */
         body {
-            background-color: var(--brand-light);
-            color: var(--brand-dark);
+            background-color: #fdfbf7;
+            color: #2c1e16;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            line-height: 1.5;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -59,180 +74,21 @@
             font-family: 'Hind Siliguri', sans-serif;
         }
 
-        /* Header */
-        header {
-            background: #fff;
-            padding: 1rem 1.5rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 50;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--brand-primary);
-            letter-spacing: 0.1em;
-        }
-        
-        .logo span {
-            font-size: 0.8rem;
-            vertical-align: super;
-            color: var(--brand-gold);
-        }
-
-        .tagline {
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            color: var(--brand-muted);
-            text-transform: uppercase;
-            display: none;
-        }
-
-        @media(min-width: 768px) {
-            .tagline { display: block; }
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 60vh;
-            background-color: var(--brand-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        @media(min-width: 768px) {
-            .hero { height: 80vh; }
-        }
-
+        /* Glossy Hero Image */
         .hero-image {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
             filter: contrast(1.05) saturate(1.1);
-            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent, rgba(0,0,0,0.6));
-            z-index: 10;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 20;
-            text-align: center;
-            padding: 0 1rem;
-        }
-
-        .hero-content h2 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        }
-        
-        @media(min-width: 768px) {
-            .hero-content h2 { font-size: 3.5rem; }
-        }
-
-        .hero-content p {
-            color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            letter-spacing: 0.1em;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .btn-hero {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background: var(--brand-gold);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: all 0.3s;
-        }
-
-        .btn-hero:hover {
-            background: #fff;
-            color: var(--brand-primary);
-        }
-
-        /* Category Filters */
-        .category-section {
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-
-        .category-section h3 {
-            font-size: 2rem;
-            color: var(--brand-primary);
-            margin-bottom: 2rem;
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 3rem;
-        }
-
-        .filter-btn {
-            padding: 8px 20px;
-            border-radius: 30px;
-            border: 1px solid #e5e0d8;
-            background: transparent;
-            color: var(--brand-muted);
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--brand-primary);
-            color: white;
-            border-color: var(--brand-primary);
-        }
-
-        /* Product Grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* 3D Product Card */
+        /* 3D Stacked Card Design */
         .product-card {
             perspective: 1000px;
             position: relative;
             transition: transform 0.3s ease;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border: 1px solid #f0f0f0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
         }
-
+        
         .product-card:hover {
             transform: translateY(-5px);
         }
@@ -240,9 +96,10 @@
         .card-image-wrapper {
             position: relative;
             overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: #fff;
             aspect-ratio: 3/4;
-            background: #f9f9f9;
-            cursor: pointer;
         }
 
         .card-image-wrapper img {
@@ -256,6 +113,7 @@
             transform: scale(1.05);
         }
 
+        /* Overlay Graphic */
         .product-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -269,7 +127,7 @@
         .discount-badge {
             position: absolute;
             top: 15px; right: 15px;
-            background: var(--brand-primary);
+            background: #8b2e3c;
             color: white;
             padding: 4px 12px;
             border-radius: 20px;
@@ -279,75 +137,7 @@
             box-shadow: 0 2px 10px rgba(139, 46, 60, 0.3);
         }
 
-        /* Slider Dots */
-        .slider-dots {
-            position: absolute;
-            bottom: 15px;
-            left: 0; right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            z-index: 20;
-        }
-
-        .dot {
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.7);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-
-        .dot.active {
-            background: var(--brand-gold);
-        }
-
-        .card-details {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .card-category {
-            font-size: 0.7rem;
-            color: var(--brand-gold);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: var(--brand-dark);
-            margin-bottom: 0.25rem;
-        }
-
-        .card-title-bn {
-            font-family: 'Hind Siliguri', sans-serif;
-            font-size: 0.9rem;
-            color: var(--brand-muted);
-            margin-bottom: 1rem;
-        }
-
-        .card-price {
-            margin-top: auto;
-            margin-bottom: 1rem;
-        }
-
-        .price-current {
-            color: var(--brand-primary);
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
-        .price-old {
-            color: #a0a0a0;
-            text-decoration: line-through;
-            font-size: 0.9rem;
-            margin-left: 0.5rem;
-        }
-
+        /* WhatsApp Button */
         .btn-whatsapp {
             background-color: #25D366;
             color: white;
@@ -358,13 +148,10 @@
             padding: 12px 24px;
             border-radius: 50px;
             font-weight: 600;
-            text-decoration: none;
             transition: all 0.3s ease;
             width: 100%;
+            margin-top: 15px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
         }
 
         .btn-whatsapp:hover {
@@ -407,177 +194,110 @@
             background: none;
             border: none;
         }
-
-        /* Footer */
-        footer {
-            background: var(--brand-dark);
-            color: #fff;
-            padding: 4rem 1.5rem 2rem;
-            margin-top: 5rem;
-            border-top: 6px solid var(--brand-gold);
-            position: relative;
+        
+        /* Category Filter */
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 30px;
+            border: 1px solid #e5e0d8;
+            background: transparent;
+            color: #6b635e;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: #8b2e3c;
+            color: white;
+            border-color: #8b2e3c;
         }
 
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
+        /* Footer Styles */
+        .footer-link {
+            color: #a09a95;
+            transition: color 0.3s;
         }
-
-        .social-box {
-            background: #fff;
-            color: var(--brand-dark);
-            padding: 1.5rem;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 1rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: absolute;
-            top: -3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            max-width: 800px;
-        }
-
-        @media(min-width: 768px) {
-            .social-box {
-                flex-direction: row;
-                padding: 1.5rem 2rem;
-            }
-        }
-
-        .social-box h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .social-box p {
-            font-size: 0.85rem;
-            color: var(--brand-muted);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 10px;
+        .footer-link:hover {
+            color: #cda34f;
         }
 
         .social-icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 36px; height: 36px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: #f4f1eb;
-            color: var(--brand-dark);
-            text-decoration: none;
+            color: #2c1e16;
             transition: all 0.3s ease;
+            margin-right: 8px;
         }
-
         .social-icon:hover {
-            background: var(--brand-primary);
+            background: #8b2e3c;
             color: white;
             transform: translateY(-3px);
         }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 4rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #444;
-            padding-bottom: 2rem;
-        }
-
-        @media(min-width: 768px) {
-            .footer-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-
-        .footer-col h5 {
-            font-size: 1.1rem;
-            color: var(--brand-gold);
-            margin-bottom: 1rem;
-        }
-
-        .footer-col p, .footer-col li, .footer-col a {
-            font-size: 0.9rem;
-            color: #b0a8a2;
-            margin-bottom: 0.5rem;
-            text-decoration: none;
-            display: block;
-            transition: color 0.3s;
-        }
-
-        .footer-col a:hover {
-            color: var(--brand-gold);
-        }
-        
-        .footer-col i {
-            color: var(--brand-gold);
-            margin-right: 8px;
-        }
-
-        .copyright {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #777;
-        }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <!-- Header -->
-    <header>
-        <div class="logo">RUCHITA<span>™</span></div>
-        <div class="tagline">Another name of refine taste</div>
+    <!-- Top Navigation -->
+    <header class="bg-white py-4 px-6 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-serif text-brand-primary tracking-widest font-bold">RUCHITA<span class="text-brand-gold text-sm align-top">™</span></h1>
+            <p class="hidden md:block text-xs tracking-[0.2em] text-brand-muted uppercase">Another name of refine taste</p>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <img src="https://i.postimg.cc/cHDn9NMt/20260616-132058-IMG-STYLE-2.jpg" alt="Ruchita Saree Aura Collection" class="hero-image">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>Elegance Redefined</h2>
-            <p>Discover the finest Tangail & Katan Sarees</p>
-            <a href="#collection" class="btn-hero">Explore Collection</a>
+    <section class="relative w-full h-[60vh] md:h-[80vh] bg-brand-dark overflow-hidden flex items-center justify-center">
+        <img src="https://i.postimg.cc/cHDn9NMt/20260616-132058-IMG-STYLE-2.jpg" alt="Ruchita Saree Aura Collection" class="hero-image absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10"></div>
+        
+        <div class="relative z-20 text-center px-4">
+            <h2 class="text-white text-4xl md:text-6xl font-serif mb-4 drop-shadow-lg">Elegance Redefined</h2>
+            <p class="text-white text-lg md:text-xl font-light tracking-widest drop-shadow-md">Discover the finest Tangail & Katan Sarees</p>
+            <a href="#collection" class="inline-block mt-8 px-8 py-3 bg-brand-gold text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition duration-300 shadow-lg">Explore Collection</a>
         </div>
     </section>
 
-    <!-- Category & Products -->
-    <section id="collection" class="category-section">
-        <h3>Our Premium Collection</h3>
-        <div class="filter-buttons" id="category-filters">
+    <!-- Category Filter Section -->
+    <section id="collection" class="py-12 px-4 container mx-auto text-center">
+        <h3 class="text-3xl font-serif mb-8 text-brand-primary">Our Premium Collection</h3>
+        <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
             <button class="filter-btn active" data-category="all">All Sarees</button>
             <button class="filter-btn" data-category="Original Tangail Monipuri">Tangail Monipuri</button>
             <button class="filter-btn" data-category="Dhakai Jamdani">Jamdani</button>
             <button class="filter-btn" data-category="Soft Silk & Katan">Soft Silk & Katan</button>
             <button class="filter-btn" data-category="Tangail Half Silk Buti">Half Silk Buti</button>
+            <button class="filter-btn" data-category="Premium & Casual Sarees">Premium & Casual</button>
         </div>
 
-        <div id="product-grid" class="product-grid">
-            <!-- Products injected via JS -->
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <!-- Products will be injected here by JavaScript -->
         </div>
     </section>
 
-    <!-- Lightbox -->
+    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
         <img id="lightbox-img" src="" alt="Product Image">
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <!-- Social Box -->
-            <div class="social-box">
-                <div>
-                    <h4>Follow Us</h4>
-                    <p>Get updates on new arrivals and offers.</p>
+    <!-- Footer Section (Utsav Inspired) -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t-[6px] border-brand-gold mt-20">
+        <div class="container mx-auto px-6">
+            
+            <!-- Social Follow Box -->
+            <div class="bg-white text-brand-dark rounded-xl p-6 flex flex-col md:flex-row justify-between items-center mb-12 shadow-2xl max-w-4xl mx-auto transform -translate-y-24 relative z-30">
+                <div class="mb-4 md:mb-0">
+                    <h4 class="text-xl font-serif font-bold mb-1">Follow Us</h4>
+                    <p class="text-sm text-brand-muted">Get updates on new arrivals and offers.</p>
                 </div>
-                <div class="social-icons">
+                <div class="flex gap-2">
                     <a href="https://www.facebook.com/share/1ZyJMqjUBj/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/ruchitasareeaura01/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="https://whatsapp.com/channel/0029Vb81Y01C1FuL0w0vw01C" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
@@ -586,36 +306,46 @@
                 </div>
             </div>
 
-            <!-- Footer Grid -->
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h5>Contact Us</h5>
-                    <p><i class="fas fa-phone"></i> +880 1885 092595</p>
-                    <p><i class="fas fa-envelope"></i> ruchitasaree0622@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+            <!-- 3 Column Footer -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 border-b border-gray-700 pb-12">
+                <!-- Column 1: Contact -->
+                <div>
+                    <h5 class="text-lg font-serif text-brand-gold mb-4">Contact Us</h5>
+                    <p class="text-sm text-gray-300 mb-2"><i class="fas fa-phone mr-2 text-brand-gold"></i> +880 1885 092595</p>
+                    <p class="text-sm text-gray-300 mb-2"><i class="fas fa-envelope mr-2 text-brand-gold"></i> support@ruchitasaree.com</p>
+                    <p class="text-sm text-gray-300"><i class="fas fa-map-marker-alt mr-2 text-brand-gold"></i> Dhaka, Bangladesh</p>
                 </div>
-                <div class="footer-col">
-                    <h5>Useful Links</h5>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="review.html">Customer Reviews</a>
+                <!-- Column 2: Useful Links -->
+                <div>
+                    <h5 class="text-lg font-serif text-brand-gold mb-4">Useful Links</h5>
+                    <ul class="flex flex-col gap-2 text-sm text-gray-300">
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="review.html" class="footer-link">Customer Reviews</a></li>
+                    </ul>
                 </div>
-                <div class="footer-col">
-                    <h5>Shipping & Delivery</h5>
-                    <p>We deliver all over Bangladesh. Inside Dhaka delivery within 24-48 hours. Outside Dhaka 2-3 days.</p>
-                    <p><strong>Payment:</strong> Cash on Delivery / bKash / Nagad.</p>
+                <!-- Column 3: Shipping -->
+                <div>
+                    <h5 class="text-lg font-serif text-brand-gold mb-4">Shipping & Delivery</h5>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        We deliver all over Bangladesh. Inside Dhaka delivery within 24-48 hours. Outside Dhaka 2-3 days.
+                        <br><br>
+                        <strong>Payment:</strong> Cash on Delivery / bKash / Nagad.
+                    </p>
                 </div>
             </div>
 
-            <div class="copyright">
-                &copy; 2026 Ruchita Saree Aura. All rights reserved.
+            <!-- Copyright -->
+            <div class="text-center text-xs text-gray-500">
+                <p>&copy; 2026 Ruchita Saree Aura. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript: Product Data & Logic -->
     <script>
+        // Product Data Array
         const products = [
             { id: 1, nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – ব্রাউন", nameEn: "Tangail Monipuri Saree – Brown", regPrice: 1000, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_5489f30b-e95d-4b6f-a24d-12e7c4a52a7f.png?v=1792501228", alt: "ব্রাউন রঙের হাফ সিল্ক টাঙ্গাইল মনিপুরী শাড়ি"}], stock: "Available", category: "Original Tangail Monipuri", descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", descEn: "Tangail Monipuri half-silk saree with a distinctive design." },
             { id: 2, nameBn: "টাঙ্গাইল মনিপুরী শাড়ি – রেড", nameEn: "Tangail Monipuri Saree – Red", regPrice: 1000, offerPrice: null, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_9cc5607d-bf8a-46df-8b03-d11c07fb7071.jpg?v=1792634983", alt: "লাল রঙের হাফ সিল্ক টাঙ্গাইল মনিপুরী শাড়ি"}], stock: "Available", category: "Original Tangail Monipuri", descBn: "হাফ সিল্কের টাঙ্গাইল মনিপুরী শাড়ি, চমৎকার নকশাসহ।", descEn: "Tangail Monipuri half-silk saree with a distinctive design." },
@@ -626,123 +356,120 @@
             { id: 7, nameBn: "কাশ্মীরী কাতান শাড়ি", nameEn: "Kashmiri Katan Saree", regPrice: 2850, offerPrice: 2565, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_4c5ec610-335a-4aed-99a4-dd336976084e.png?v=1792497395", alt: "ম্যাজেন্টা কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_6f058c65-b361-4ef4-bc85-b7345587c959.jpg?v=1792500765", alt: "ডিপ পার্পল কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_dfca172c-64c2-4dcc-939a-5442dd99cdd0.jpg?v=1792500825", alt: "কাশ্মীরী কাতান শাড়ির কাজ"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_25157c5b-75ab-43b9-a2b5-201c68e929f1.jpg?v=1792500709", alt: "কাশ্মীরী কাতান শাড়ির pallu"}], stock: "Available", category: "Soft Silk & Katan", descBn: "পিওর কাতান ম্যাটেরিয়ালের শাড়ি, মিনাকারী কাজ করা। (Magenta/Deep Purple)", descEn: "Pure katan saree with meenakari work and contrast blouse piece." },
             { id: 8, nameBn: "সফট কাতান ল্যাভেন্ডার", nameEn: "Soft Katan - Lavender", regPrice: 2050, offerPrice: 1845, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367", alt: "ল্যাভেন্ডার রঙের সফট কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", descEn: "Lavender Silk Soft Katan Saree." },
             
-            // নতুন আসাম সিল্ক
-            { 
-                id: 9, 
-                nameBn: "আসাম সিল্ক – রোজ পিংক", 
-                nameEn: "Assam Silk – Rose Pink", 
-                regPrice: 2100, 
-                offerPrice: null, 
-                images: [
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/generated-image_19ae76eb-390b-48f5-b780-2c5f7329b988-1.png", alt: "রোজ পিংক আসাম সিল্ক শাড়ি মডেলসহ"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/generated-image_19ae76eb-390b-48f5-b780-2c5f7329b988-2.png", alt: "রোজ পিংক আসাম সিল্ক শাড়ির আঁচল"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/generated-image_19ae76eb-390b-48f5-b780-2c5f7329b988-3.png", alt: "রোজ পিংক আসাম সিল্ক শাড়ির পাড়"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/generated-image_19ae76eb-390b-48f5-b780-2c5f7329b988-4.png", alt: "রোজ পিংক আসাম সিল্ক ব্লাউজ পিস"}
-                ], 
-                stock: "Available", 
-                category: "Soft Silk & Katan", 
-                descBn: "রোজ পিংক-এর আসাম সিল্ক। গোলাপি-লাল বডিতে টিল ও সোনালি ঢেউখেলানো নকশা। গাঢ় টিল আঁচল ও পাড়। কাপড়: আসাম সিল্ক। শাড়ির দৈর্ঘ্য: ১২ হাত। ব্লাউজ পিস: আছে (তৈরি ব্লাউজ নয়)। উপযোগী: পার্টি, উৎসব ও শীতের সাজ। মূল্য: ৳২১০০। ছবিগুলো AI-তৈরি স্টাইলিং নমুনা।", 
-                descEn: "Rose Pink Assam Silk. Pink-red body with teal and gold wavy motifs, deep teal border and pallu. Fabric: Assam Silk. Length: 12 hands. Blouse piece: Included (Unstitched). Occasion: Party, Festival & Winter Wear. Price: ৳2100. Images are AI-generated styling samples." 
-            }
+            // নতুন ৪টি প্রোডাক্ট (ছবির লিংক আপাতত প্লেসহোল্ডার দেওয়া হলো, পরে আসল লিংক বসাবেন)
+            { id: 9, nameBn: "চুন্দ্রী সিল্ক [বাটিক]", nameEn: "Chundri Silk [Batik]", regPrice: 2150, offerPrice: 1828, images: [{url: "https://via.placeholder.com/600x800?text=Chundri+Silk", alt: "চুন্দ্রী সিল্ক বাটিক শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "চুন্দ্রী সিল্ক বাটিক শাড়ি।", descEn: "Chundri Silk [Batik] Saree." },
+            { id: 10, nameBn: "আসাম সিল্ক", nameEn: "Assam Silk", regPrice: 2050, offerPrice: 1743, images: [{url: "https://via.placeholder.com/600x800?text=Assam+Silk", alt: "আসাম সিল্ক শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "আসাম সিল্ক শাড়ি।", descEn: "Assam Silk Saree." },
+            { id: 11, nameBn: "কানি কাতান", nameEn: "Kani Katan", regPrice: 3400, offerPrice: 2890, images: [{url: "https://via.placeholder.com/600x800?text=Kani+Katan", alt: "কানি কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "কানি কাতান শাড়ি।", descEn: "Kani Katan Saree." },
+            { id: 12, nameBn: "তুবা সিল্ক", nameEn: "Tuba Silk", regPrice: 1450, offerPrice: 1233, images: [{url: "https://via.placeholder.com/600x800?text=Tuba+Silk", alt: "তুবা সিল্ক শাড়ি"}], stock: "Available", category: "Premium & Casual Sarees", descBn: "তুবা সিল্ক শাড়ি।", descEn: "Tuba Silk Saree." }
         ];
 
         const productGrid = document.getElementById('product-grid');
         const categoryFilters = document.getElementById('category-filters');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
-        let currentImageIndex = 0;
-        let currentImagesArray = [];
 
+        // Function to Render Products
         function renderProducts(category = 'all') {
-            productGrid.innerHTML = '';
-            const filteredProducts = category === 'all' ? products : products.filter(p => p.category === category);
+            productGrid.innerHTML = ''; // Clear current products
+            
+            const filteredProducts = category === 'all' 
+                ? products 
+                : products.filter(p => p.category === category);
 
             if (filteredProducts.length === 0) {
-                productGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666; padding: 2rem;">No products found in this category.</p>';
+                productGrid.innerHTML = '<p class="col-span-full text-center text-gray-500 py-10">No products found in this category.</p>';
                 return;
             }
 
-            filteredProducts.forEach((product) => {
+            filteredProducts.forEach((product, index) => {
+                // Calculate discount percentage if offer price exists
                 let discountBadge = '';
-                let displayPrice = `<span class="price-current">৳${product.regPrice}</span>`;
+                let displayPrice = `<span class="text-brand-primary font-bold text-lg">৳${product.regPrice}</span>`;
                 
                 if (product.offerPrice) {
                     const discountPercent = Math.round(((product.regPrice - product.offerPrice) / product.regPrice) * 100);
                     discountBadge = `<div class="discount-badge">-${discountPercent}%</div>`;
                     displayPrice = `
-                        <span class="price-current">৳${product.offerPrice}</span>
-                        <span class="price-old">৳${product.regPrice}</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-brand-primary font-bold text-lg">৳${product.offerPrice}</span>
+                            <span class="text-gray-400 line-through text-sm">৳${product.regPrice}</span>
+                        </div>
                     `;
                 }
 
+                // WhatsApp Message Link Generation
                 const message = `আসসালামু আলাইকুম, আমি এই শাড়িটি অর্ডার করতে চাই:\n\nশাড়ির নাম: ${product.nameBn}\nদাম: ${product.offerPrice ? product.offerPrice : product.regPrice} টাকা\n\nঅনুগ্রহ করে বিস্তারিত জানাবেন।`;
                 const whatsappLink = `https://wa.me/8801885092595?text=${encodeURIComponent(message)}`;
+
+                // Create Card HTML
                 const card = document.createElement('div');
-                card.className = 'product-card';
+                card.className = 'product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col';
+                
+                // Main image for card (using first image)
                 const mainImage = product.images[0].url;
-                const imagesJson = JSON.stringify(product.images).replace(/"/g, '&quot;');
 
                 card.innerHTML = `
-                    <div class="card-image-wrapper" onclick='openLightbox(${imagesJson}, 0)'>
+                    <div class="card-image-wrapper cursor-pointer" onclick="openLightbox('${mainImage}', '${product.nameEn}')">
                         ${discountBadge}
                         <div class="product-overlay"></div>
                         <img src="${mainImage}" alt="${product.nameEn}" loading="lazy">
                         
                         ${product.images.length > 1 ? `
-                            <div class="slider-dots">
-                                ${product.images.map((_, i) => `<span class="dot ${i === 0 ? 'active' : ''}"></span>`).join('')}
+                            <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-1 z-20">
+                                ${product.images.map((_, i) => `<span class="w-2 h-2 rounded-full bg-white/80 shadow-sm ${i === 0 ? 'bg-brand-gold' : ''}"></span>`).join('')}
                             </div>
                         ` : ''}
                     </div>
                     
-                    <div class="card-details">
-                        <p class="card-category">${product.category}</p>
-                        <h4 class="card-title">${product.nameEn}</h4>
-                        <p class="card-title-bn">${product.nameBn}</p>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <p class="text-xs text-brand-gold uppercase tracking-wider mb-1">${product.category}</p>
+                        <h4 class="text-lg font-serif font-bold text-brand-dark leading-tight mb-1">${product.nameEn}</h4>
+                        <p class="bn-text text-sm text-gray-600 mb-3">${product.nameBn}</p>
                         
-                        <div class="card-price">
+                        <div class="mt-auto">
                             ${displayPrice}
+                            
+                            <a href="${whatsappLink}" target="_blank" class="btn-whatsapp" onclick="event.stopPropagation()">
+                                <i class="fab fa-whatsapp text-xl"></i> Order Now
+                            </a>
                         </div>
-                        <a href="${whatsappLink}" target="_blank" class="btn-whatsapp" onclick="event.stopPropagation()">
-                            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Order Now
-                        </a>
                     </div>
                 `;
+                
                 productGrid.appendChild(card);
             });
         }
 
+        // Category Filter Click Event
         categoryFilters.addEventListener('click', (e) => {
             if (e.target.classList.contains('filter-btn')) {
+                // Remove active class from all buttons
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
                 e.target.classList.add('active');
+                
                 const category = e.target.getAttribute('data-category');
                 renderProducts(category);
             }
         });
 
-        function openLightbox(images, index) {
-            currentImagesArray = images;
-            currentImageIndex = index;
-            updateLightboxImage();
+        // Lightbox Functions
+        function openLightbox(imgSrc, imgAlt) {
+            lightboxImg.src = imgSrc;
+            lightboxImg.alt = imgAlt;
             lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function updateLightboxImage() {
-            if (currentImagesArray.length > 0) {
-                lightboxImg.src = currentImagesArray[currentImageIndex].url;
-                lightboxImg.alt = currentImagesArray[currentImageIndex].alt;
-            }
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
 
         function closeLightbox(event) {
+            // Only close if clicking the background or the close button
             if (event.target === lightbox || event.target.classList.contains('lightbox-close')) {
                 lightbox.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
         }
 
+        // Initialize rendering on load
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts('all');
         });
