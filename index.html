@@ -86,60 +86,69 @@
         .product-card {
             perspective: 1000px;
             position: relative;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .card-image-wrapper {
             position: relative;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            background: #fff;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            background: #f8f8f8;
             aspect-ratio: 3/4;
+            transform-style: preserve-3d;
         }
 
         .card-image-wrapper img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .product-card:hover .card-image-wrapper img {
-            transform: scale(1.05);
+            transform: scale(1.08) rotate(1deg);
         }
 
-        /* Overlay Graphic */
+        /* Elegant Overlay Graphic */
         .product-overlay {
             position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border: 1px solid rgba(205, 163, 79, 0.3);
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid rgba(205, 163, 79, 0.4);
             border-radius: 12px;
             pointer-events: none;
-            margin: 10px;
             z-index: 10;
+            transition: border-color 0.3s ease;
+        }
+
+        .product-card:hover .product-overlay {
+            border-color: rgba(205, 163, 79, 0.8);
         }
 
         .discount-badge {
             position: absolute;
             top: 15px; right: 15px;
-            background: #8b2e3c;
+            background: linear-gradient(135deg, #8b2e3c, #a83849);
             color: white;
-            padding: 4px 12px;
+            padding: 5px 14px;
             border-radius: 20px;
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             z-index: 20;
-            box-shadow: 0 2px 10px rgba(139, 46, 60, 0.3);
+            box-shadow: 0 4px 10px rgba(139, 46, 60, 0.3);
         }
 
         /* WhatsApp Button */
         .btn-whatsapp {
-            background-color: #25D366;
+            background: linear-gradient(to right, #25D366, #128C7E);
             color: white;
             display: flex;
             align-items: center;
@@ -152,19 +161,21 @@
             width: 100%;
             margin-top: 15px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+            border: none;
+            cursor: pointer;
         }
 
         .btn-whatsapp:hover {
-            background-color: #128C7E;
+            background: linear-gradient(to right, #128C7E, #075E54);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
 
         /* Lightbox */
         .lightbox {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.95);
             display: none;
             justify-content: center;
             align-items: center;
@@ -183,6 +194,7 @@
             max-height: 85vh;
             object-fit: contain;
             border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
         }
 
         .lightbox-close {
@@ -191,8 +203,11 @@
             color: white;
             font-size: 30px;
             cursor: pointer;
-            background: none;
+            background: rgba(255,255,255,0.1);
             border: none;
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
         }
         
         /* Category Filter */
@@ -200,17 +215,20 @@
             padding: 8px 20px;
             border-radius: 30px;
             border: 1px solid #e5e0d8;
-            background: transparent;
+            background: #fff;
             color: #6b635e;
             font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
             white-space: nowrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
         
         .filter-btn.active, .filter-btn:hover {
             background: #8b2e3c;
             color: white;
             border-color: #8b2e3c;
+            box-shadow: 0 4px 10px rgba(139, 46, 60, 0.2);
         }
 
         /* Footer Styles */
@@ -254,7 +272,7 @@
     <!-- Hero Section -->
     <section class="relative w-full h-[60vh] md:h-[80vh] bg-brand-dark overflow-hidden flex items-center justify-center">
         <img src="https://i.postimg.cc/cHDn9NMt/20260616-132058-IMG-STYLE-2.jpg" alt="Ruchita Saree Aura Collection" class="hero-image absolute inset-0 z-0">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60 z-10"></div>
         
         <div class="relative z-20 text-center px-4">
             <h2 class="text-white text-4xl md:text-6xl font-serif mb-4 drop-shadow-lg">Elegance Redefined</h2>
@@ -356,7 +374,7 @@
             { id: 7, nameBn: "কাশ্মীরী কাতান শাড়ি", nameEn: "Kashmiri Katan Saree", regPrice: 2850, offerPrice: 2565, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_4c5ec610-335a-4aed-99a4-dd336976084e.png?v=1792497395", alt: "ম্যাজেন্টা কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_6f058c65-b361-4ef4-bc85-b7345587c959.jpg?v=1792500765", alt: "ডিপ পার্পল কাশ্মীরী কাতান শাড়ি"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_dfca172c-64c2-4dcc-939a-5442dd99cdd0.jpg?v=1792500825", alt: "কাশ্মীরী কাতান শাড়ির কাজ"}, {url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/rn-image_picker_lib_temp_25157c5b-75ab-43b9-a2b5-201c68e929f1.jpg?v=1792500709", alt: "কাশ্মীরী কাতান শাড়ির pallu"}], stock: "Available", category: "Soft Silk & Katan", descBn: "পিওর কাতান ম্যাটেরিয়ালের শাড়ি, মিনাকারী কাজ করা। (Magenta/Deep Purple)", descEn: "Pure katan saree with meenakari work and contrast blouse piece." },
             { id: 8, nameBn: "সফট কাতান ল্যাভেন্ডার", nameEn: "Soft Katan - Lavender", regPrice: 2050, offerPrice: 1845, images: [{url: "https://cdn.shopify.com/s/files/1/0769/7088/5257/files/IMG-20261026-WA0011.jpg?v=1792980367", alt: "ল্যাভেন্ডার রঙের সফট কাতান শাড়ি"}], stock: "Available", category: "Soft Silk & Katan", descBn: "ল্যাভেন্ডার কালারের সফট কাতান শাড়ি।", descEn: "Lavender Silk Soft Katan Saree." },
             
-            // নতুন প্রোডাক্ট (Asam Silk - Rose Pink)
+            // নতুন প্রোডাক্ট (Asam Silk - Rose Pink) - সঠিক ছবির লিংক দেওয়া হলো
             { 
                 id: 9, 
                 nameBn: "আসাম সিল্ক – রোজ পিংক", 
@@ -364,10 +382,7 @@
                 regPrice: 2100, 
                 offerPrice: null, 
                 images: [
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/Asami%20Silk%20rose%201.jpg", alt: "রোজ পিংক আসাম সিল্ক শাড়ি মডেলসহ"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/Asami%20Silk%20rose%202.jpg", alt: "রোজ পিংক আসাম সিল্ক শাড়ির আঁচল"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/Asami%20Silk%20rose%203.jpg", alt: "রোজ পিংক আসাম সিল্ক শাড়ির পাড়"},
-                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/Asami%20Silk%20rose%204.jpg", alt: "রোজ পিংক আসাম সিল্ক ব্লাউজ পিস"}
+                    {url: "https://raw.githubusercontent.com/ruchitasareeaura-collab/ruchita-showcase/main/generated-image_19ae76eb-390b-48f5-b780-2c5f7329b988-1.png", alt: "রোজ পিংক আসাম সিল্ক শাড়ি"}
                 ], 
                 stock: "Available", 
                 category: "Soft Silk & Katan", 
@@ -385,7 +400,7 @@
 
         // Function to Render Products
         function renderProducts(category = 'all') {
-            productGrid.innerHTML = ''; // Clear current products
+            productGrid.innerHTML = ''; 
             
             const filteredProducts = category === 'all' 
                 ? products 
@@ -397,7 +412,6 @@
             }
 
             filteredProducts.forEach((product, index) => {
-                // Calculate discount percentage if offer price exists
                 let discountBadge = '';
                 let displayPrice = `<span class="text-brand-primary font-bold text-lg">৳${product.regPrice}</span>`;
                 
@@ -412,18 +426,13 @@
                     `;
                 }
 
-                // WhatsApp Message Link Generation
                 const message = `আসসালামু আলাইকুম, আমি এই শাড়িটি অর্ডার করতে চাই:\n\nশাড়ির নাম: ${product.nameBn}\nদাম: ${product.offerPrice ? product.offerPrice : product.regPrice} টাকা\n\nঅনুগ্রহ করে বিস্তারিত জানাবেন।`;
                 const whatsappLink = `https://wa.me/8801885092595?text=${encodeURIComponent(message)}`;
 
-                // Create Card HTML
                 const card = document.createElement('div');
-                card.className = 'product-card bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col';
+                card.className = 'product-card flex flex-col';
                 
-                // Main image for card (using first image)
                 const mainImage = product.images[0].url;
-
-                // Generate image array for lightbox
                 const imagesJson = JSON.stringify(product.images).replace(/"/g, '&quot;');
 
                 card.innerHTML = `
@@ -439,7 +448,7 @@
                         ` : ''}
                     </div>
                     
-                    <div class="p-5 flex-grow flex flex-col">
+                    <div class="p-5 flex-grow flex flex-col bg-white rounded-b-2xl">
                         <p class="text-xs text-brand-gold uppercase tracking-wider mb-1">${product.category}</p>
                         <h4 class="text-lg font-serif font-bold text-brand-dark leading-tight mb-1">${product.nameEn}</h4>
                         <p class="bn-text text-sm text-gray-600 mb-3">${product.nameBn}</p>
@@ -458,7 +467,6 @@
             });
         }
 
-        // Category Filter Click Event
         categoryFilters.addEventListener('click', (e) => {
             if (e.target.classList.contains('filter-btn')) {
                 document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -468,7 +476,6 @@
             }
         });
 
-        // Lightbox Functions
         function openLightbox(images, index) {
             currentImagesArray = images;
             currentImageIndex = index;
@@ -484,22 +491,6 @@
             }
         }
 
-        function nextImage(event) {
-            event.stopPropagation();
-            if (currentImagesArray.length > 1) {
-                currentImageIndex = (currentImageIndex + 1) % currentImagesArray.length;
-                updateLightboxImage();
-            }
-        }
-
-        function prevImage(event) {
-            event.stopPropagation();
-            if (currentImagesArray.length > 1) {
-                currentImageIndex = (currentImageIndex - 1 + currentImagesArray.length) % currentImagesArray.length;
-                updateLightboxImage();
-            }
-        }
-
         function closeLightbox(event) {
             if (event.target === lightbox || event.target.classList.contains('lightbox-close')) {
                 lightbox.classList.remove('active');
@@ -507,7 +498,6 @@
             }
         }
 
-        // Initialize rendering on load
         document.addEventListener('DOMContentLoaded', () => {
             renderProducts('all');
         });
